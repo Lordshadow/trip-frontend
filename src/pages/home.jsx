@@ -32,7 +32,7 @@ const HomePage = () => {
             <div className="room-cards-container">
               <div className="room-card">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Shinjuku_2019_view.jpg/1280px-Shinjuku_2019_view.jpg"
+                  src="https://imgs.search.brave.com/ENrOC44wBZxhfLjtaZgUHyZZM-CApbjY8aqHIjIYGKA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RhdGUuZ292L3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDE5LzA0/L0phcGFuLTIxMDd4/MTQwNi5qcGc"
                   alt="Tokyo Cityscape"
                   className="card-img-top"
                 />
@@ -53,7 +53,7 @@ const HomePage = () => {
               </div>
               <div className="room-card">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg"
+                  src="https://imgs.search.brave.com/iqEKkIwFfOD6WQHFdFBY4zGyTZiwe_epuIcOZCffisI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTEx/NTcwOTA0L3Bob3Rv/L3ZpZXctb2YtdmVu/aWNlcy1ncmFuZC1j/YW5hbC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9a2htWWIw/dkZKQ2Zfa1dHTzlF/R0V4cm5SWHFQSENE/MVBHSXdUbGRub3hG/UT0"
                   alt="Rome Colosseum"
                   className="card-img-top"
                 />
@@ -73,7 +73,7 @@ const HomePage = () => {
               </div>
               <div className="room-card">
                 <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Matterhorn_from_Stellisee.jpg/1280px-Matterhorn_from_Stellisee.jpg"
+                  src="https://imgs.search.brave.com/bkMOYCacjh_jQhYcl8yV3lbbSfCdEkyS3RPWJBEPI6w/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzk0Lzg0LzQ1/LzM2MF9GXzk0ODQ0/NTI0X0ZGTWN0blla/azJTZktRTXFrWFdO/WmprY0NCbE9BUjZH/LmpwZw"
                   alt="Swiss Alps"
                   className="card-img-top"
                 />
