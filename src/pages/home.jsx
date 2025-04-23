@@ -7,40 +7,44 @@ const HomePage = () => {
       <div className="home-hero-no-bs">
         <div className="overlay">
           <div className="hero-content">
-            <h1>Welcome to Paradise</h1>
+            <h1>Plan Your Perfect Getaway with TripTack Tix</h1>
             <p className="lead">
-              Experience world-class luxury and stunning beachside views.
+              Discover amazing destinations and create your ideal trip with
+              TripTack Tix.
             </p>
-            <a href="/rooms" className="btn-explore">
-              Explore Rooms
+            <a href="/destinations" className="btn-explore">
+              Explore Destinations
             </a>
           </div>
         </div>
       </div>
       <div className="home-secondary-no-bs">
         <div className="secondary-content">
-          <section id="rooms-preview" className="py-4">
-            <h2 className="text-center mb-5">Discover Your Perfect Escape</h2>
+          <section id="destinations-preview" className="py-4">
+            <h2 className="text-center mb-5">
+              Find Your Next Adventure with TripTack Tix
+            </h2>
             <p className="lead text-center mb-4">
-              Our rooms and suites are designed to provide the ultimate in
-              comfort and style. Each offers a unique ambiance and stunning
-              views, ensuring a truly unforgettable stay.
+              Browse our curated selection of destinations on TripTack Tix, from
+              bustling cities to serene natural landscapes. Start planning your
+              unforgettable journey today.
             </p>
             <div className="room-cards-container">
               <div className="room-card">
                 <img
-                  src="https://cms-asset.ayana.com/cdn-cgi/image/f=auto,q=85,width=1150/575x320_KMD_Room_OVS_Highlight1_b9a7742dfe.jpg"
-                  alt="Ocean View Suite"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Shinjuku_2019_view.jpg/1280px-Shinjuku_2019_view.jpg"
+                  alt="Tokyo Cityscape"
                   className="card-img-top"
                 />
                 <div className="card-body text-center">
-                  <h3 className="card-title h5">Ocean View Suites</h3>
+                  <h3 className="card-title h5">Tokyo, Japan</h3>
                   <p className="card-text small">
-                    Spacious suites with breathtaking ocean views and private
-                    balconies.
+                    Experience the vibrant culture, futuristic architecture,
+                    and delicious cuisine of this incredible metropolis with
+                    TripTack Tix.
                   </p>
                   <a
-                    href="/rooms?type=ocean-view"
+                    href="/destinations?location=tokyo"
                     className="btn-outline-primary"
                   >
                     Explore
@@ -49,18 +53,18 @@ const HomePage = () => {
               </div>
               <div className="room-card">
                 <img
-                  src="https://www.theluxurysignature.com/wp-content/uploads/2015/02/villa-anavaya-samui-seaview.jpg"
-                  alt="Beachfront Villa"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1280px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg"
+                  alt="Rome Colosseum"
                   className="card-img-top"
                 />
                 <div className="card-body text-center">
-                  <h3 className="card-title h5">Beachfront Villas</h3>
+                  <h3 className="card-title h5">Rome, Italy</h3>
                   <p className="card-text small">
-                    Luxurious villas with direct beach access and private plunge
-                    pools.
+                    Discover ancient history, iconic landmarks, and charming
+                    streets in the eternal city with TripTack Tix.
                   </p>
                   <a
-                    href="/rooms?type=beachfront-villa"
+                    href="/destinations?location=rome"
                     className="btn-outline-primary"
                   >
                     Explore
@@ -69,17 +73,19 @@ const HomePage = () => {
               </div>
               <div className="room-card">
                 <img
-                  src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BBukBbX.img?w=1920&h=1080&m=4&q=74"
-                  alt="Overwater Bungalow"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Matterhorn_from_Stellisee.jpg/1280px-Matterhorn_from_Stellisee.jpg"
+                  alt="Swiss Alps"
                   className="card-img-top"
                 />
                 <div className="card-body text-center">
-                  <h3 className="card-title h5">Overwater Bungalows</h3>
+                  <h3 className="card-title h5">Swiss Alps, Switzerland</h3>
                   <p className="card-text small">
-                    Secluded bungalows suspended over the crystal-clear lagoon.
+                    Immerse yourself in breathtaking mountain scenery, enjoy
+                    outdoor activities, and experience Swiss hospitality with
+                    TripTack Tix.
                   </p>
                   <a
-                    href="/rooms?type=overwater-bungalow"
+                    href="/destinations?location=swiss-alps"
                     className="btn-outline-primary"
                   >
                     Explore
@@ -88,63 +94,65 @@ const HomePage = () => {
               </div>
             </div>
             <div className="text-center mt-4">
-              <a href="/rooms" className="btn-primary">
-                View All Accommodations
+              <a href="/destinations" className="btn-primary">
+                View All Destinations on TripTack Tix
               </a>
             </div>
           </section>
 
-          <section id="experiences" className="py-4">
-            <h2 className="text-center mb-5">Unforgettable Experiences</h2>
+          <section id="plan-your-trip" className="py-4">
+            <h2 className="text-center mb-5">
+              Start Planning Your Trip with TripTack Tix
+            </h2>
             <p className="lead text-center mb-4">
-              At Paradise, we offer a curated selection of experiences
-              designed to immerse you in the beauty and culture of our
-              destination.
+              Tell us your preferences and let TripTack Tix help you craft the
+              perfect itinerary. Discover exciting activities and find the best
+              accommodations for your adventure.
             </p>
             <div className="experience-items">
               <div className="experience-item">
                 <i
-                  className="bi bi-water me-3 text-info"
+                  className="bi bi-geo-alt me-3 text-info"
                   style={{ fontSize: "2rem" }}
                 ></i>
                 <div>
-                  <h3 className="h5">Aquatic Adventures</h3>
+                  <h3 className="h5">Choose Your Destination</h3>
                   <p className="small text-white">
-                    Explore vibrant coral reefs with snorkeling or diving, embark
-                    on a sunset cruise, or enjoy the thrill of jet skiing.
+                    Select from a wide range of incredible locations around the
+                    globe on TripTack Tix.
                   </p>
                 </div>
               </div>
               <div className="experience-item">
                 <i
-                  className="bi bi-spa me-3 text-warning"
+                  className="bi bi-calendar-event me-3 text-warning"
                   style={{ fontSize: "2rem" }}
                 ></i>
                 <div>
-                  <h3 className="h5">Wellness & Rejuvenation</h3>
+                  <h3 className="h5">Select Your Dates</h3>
                   <p className="small text-white">
-                    Indulge in a pampering spa treatment, practice yoga on the
-                    beach, or simply relax by our infinity pool.
+                    Pick the perfect time to travel and explore your chosen
+                    destination with TripTack Tix.
                   </p>
                 </div>
               </div>
               <div className="experience-item">
                 <i
-                  className="bi bi-compass me-3 text-success"
+                  className="bi bi-briefcase me-3 text-success"
                   style={{ fontSize: "2rem" }}
                 ></i>
                 <div>
-                  <h3 className="h5">Cultural Immersion</h3>
+                  <h3 className="h5">Find Activities & Stays</h3>
                   <p className="small text-white">
-                    Discover the rich local culture with guided tours, traditional
-                    performances, and culinary experiences.
+                    Discover exciting things to do and comfortable places to
+                    stay during your trip with TripTack Tix.
                   </p>
                 </div>
               </div>
             </div>
             <div className="text-center mt-4">
-              <a href="/activities" className="btn-secondary">
-                Explore All Activities
+              <a href="/plan" className="btn-secondary">
+                Start Planning Now with TripTack Tix
               </a>
             </div>
           </section>

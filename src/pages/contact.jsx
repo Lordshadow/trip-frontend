@@ -39,17 +39,33 @@ const Contact = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form submitted:", { name, email, message });
-      alert("Message sent successfully!");
-      setName("");
-      setEmail("");
-      setMessage("");
+      try {
+        const res = await fetch('http://localhost:5000/send', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message }),
+        });
+  
+        const data = await res.json();
+  
+        if (res.ok) {
+          alert("Message sent successfully!");
+          setName("");
+          setEmail("");
+          setMessage("");
+        } else {
+          alert(data.message || "Something went wrong. Try again later.");
+        }
+      } catch (err) {
+        console.error(err);
+        alert("Failed to send message. Please try again.");
+      }
     }
   };
-
+  
   return (
     <div className="contact-page">
       <div className="contact-hero">
@@ -71,10 +87,10 @@ const Contact = () => {
                 <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" /> 123 Paradise Island Road, Azure Atoll, Paradise
               </li>
               <li>
-                <FontAwesomeIcon icon={faEnvelope} className="me-2" /> info@paradiseresort.com
+                <FontAwesomeIcon icon={faEnvelope} className="me-2" /> zenturyaegis@hotmail.com
               </li>
               <li>
-                <FontAwesomeIcon icon={faPhone} className="me-2" /> +1 (555) 123-4567
+                <FontAwesomeIcon icon={faPhone} className="me-2" /> +91 9894412777
               </li>
               <li>
                 <FontAwesomeIcon icon={faClock} className="me-2" /> Monday - Sunday: 9:00 AM - 6:00 PM (Local Time)
