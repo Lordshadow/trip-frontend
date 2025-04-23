@@ -92,6 +92,7 @@ const Register = () => {
         setVerificationSent(true);
 
         const userData = {
+          name: name,
           email: email,
           firebaseUID: user.uid,
           phoneNumber: phoneNumber,

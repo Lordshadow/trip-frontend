@@ -46,7 +46,7 @@ const SignIn = () => {
 
         if (user.emailVerified) {
           alert('Login Successful!');
-          navigate('/home'); // Assuming '/home' is your home page route
+          navigate('/profilepage'); // Assuming '/home' is your home page route
         } else {
           alert('Your email address has not been verified. Please check your inbox to verify.');
           // Optionally, you might want to sign the user out here:

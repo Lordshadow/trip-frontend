@@ -19,7 +19,7 @@ const NavBar = () => {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/activities">Activities</Nav.Link>
-            
+            <Nav.Link href="/profilepage">Pofile</Nav.Link>
             <Nav.Link href="/signup" className="btn btn-primary text-white px-3">Sign Up</Nav.Link>
           </Nav>
         </Navbar.Collapse>

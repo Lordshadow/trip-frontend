@@ -12,6 +12,7 @@ import Register from "./pages/register";
 import Booking from "./pages/booking";
 import Footer from "./pages/footer";
 import ForgotPassword from "./components/ForgotPassword";
+import ProfilePage from "./pages/ProfilePage";
 
 function App()
 {
@@ -27,6 +28,7 @@ function App()
             <Route path="/activities" element={<Activities />} />
             <Route path="/signup" element={<SignIn />} />
            <Route path="/register" element={<Register />} />
+           <Route path="/profilepage" element={<ProfilePage/>}/>
            <Route path="/forgot-password" element={<ForgotPassword />} />
           </Routes>
           <Footer />
