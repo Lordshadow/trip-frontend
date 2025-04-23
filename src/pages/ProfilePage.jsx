@@ -1,7 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
 import '../styles/ProfilePage.css';
-import { Link } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from 'firebase/auth'; // Import Firebase Auth
 
 const ProfilePage = () => {
@@ -12,16 +10,9 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchUserProfile = async (firebaseId) => {
       try {
-        const token = localStorage.getItem('authToken'); // Assuming you store your backend auth token
-        if (!token) {
-          setError('Authentication token not found.');
-          setLoading(false);
-          return;
-        }
-
-        const response = await fetch(`/api/users/profile/${firebaseId}`, { // API endpoint to fetch by Firebase UID
+        const response = await fetch(`https://trip-planner-backend-isxb.onrender.com/api/profile/${firebaseId}`, { // API endpoint to fetch by Firebase UID
           headers: {
-            'Authorization': `Bearer ${token}`,
+            // Removed the 'Authorization' header
           },
         });
 
@@ -76,7 +67,7 @@ const ProfilePage = () => {
       <section className="profile-info">
         <div className="info-item">
           <span className="info-label">Name:</span>
-          <span className="info-value">{userProfile.name || 'N/A'}</span> {/* Assuming 'name' might exist */}
+          <span className="info-value">{userProfile.name || 'N/A'}</span> 
         </div>
         <div className="info-item">
           <span className="info-label">Email:</span>
@@ -88,18 +79,9 @@ const ProfilePage = () => {
             <span className="info-value">{userProfile.phoneNumber}</span>
           </div>
         )}
-        {/* Add more profile information here based on your backend response */}
+        
       </section>
 
-      <footer className="profile-footer">
-        <Link to="/edit-profile" className="edit-button">
-          Edit Profile
-        </Link>
-        <Link to="/dashboard" className="back-button">
-          Back to Dashboard
-        </Link>
-        {/* Add other navigation links or actions */}
-      </footer>
     </div>
   );
 };
