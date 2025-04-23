@@ -1,0 +1,94 @@
+
+
+.contact-page .form-control.is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .contact-page .invalid-feedback {
+    display: block;
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+  }
+
+
+  .contact-page {
+    padding-top: 60px;
+    min-height: 100vh;
+    background-color: #00000052; 
+  
+    background-image: url("https://assets.hiltonstatic.com/hilton-asset-cache/image/upload/c_fill,w_1920,h_1080,q_70,f_auto,g_auto/Imagery/Property%20Photography/Hilton%20Hotels%20and%20Resorts/D/DPSBAHI/Resort%20Overview-rev1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  .contact-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+  }
+  
+  
+  .contact-hero {
+    position: relative; 
+    z-index: 2;
+  }
+  
+  .contact-hero
+  {
+    color: white;
+  }
+  
+  .container {
+    position: relative; 
+    z-index: 1;
+  }
+
+
+
+.contact-page .form-control {
+    background-color: transparent; 
+    border: 1px solid white; 
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    color: white; 
+  }
+  
+  .contact-page .form-control:focus {
+    outline: none;
+    border-color: #03a8ef; 
+    box-shadow: 0 0 0 0.2rem rgba(3, 168, 239, 0.25); 
+  }
+  
+  .contact-page .form-control::placeholder {
+    color: white; 
+    opacity: 0.7; 
+  }
+
+
+  .contact-info {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 15px; 
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info li i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #03a8ef;
+  }

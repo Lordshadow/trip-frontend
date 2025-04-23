@@ -1,0 +1,55 @@
+.about-us-page {
+    position: relative; 
+    min-height: 100vh;
+    background-image: url("https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iGLAXAV9HfdY/v0/-1x-1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  
+  .tint {
+    position: relative;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55); 
+    z-index: 1; 
+  }
+  
+  .content-wrapper {
+    min-height: 100vh;
+    position: relative;
+    z-index: 3; 
+    color: white;
+  }
+  .about-us-page h2 {
+    color: white; 
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .about-us-page p {
+    color: white; 
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  
+  .about-us-page ul li {
+    color: white;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  .about-us-page strong {
+    color: white;
+    font-weight: bold; 
+  }
+
+  .about-us-page a {
+    color: white; 
+    text-decoration: none; 
+  }
+
+  .about-us-page a:hover {
+    color: lightgray; 
+  }

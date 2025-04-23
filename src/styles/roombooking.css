@@ -1,0 +1,107 @@
+.room-booking-page {
+    padding: 50px 0;
+    background-image: url("https://dreamoverwater.com/wp-content/uploads/2022/02/soneva-jani-water-villa-maldives-1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+  
+    min-height: 100vh;
+  }
+  
+  .room-booking-page .hero-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: rgba(52, 48, 48, 0.4); /* Dark overlay for better text readability */
+    color: white;
+    margin-bottom: 40px;
+  }
+  .room-booking-page .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .room-booking-page .hero-section p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .room-list {
+    padding: 20px;
+  }
+  
+  .room-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .room-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .room-image {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .room-details {
+    padding: 20px;
+  }
+  
+  .room-details .room-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .room-details .room-description {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+  
+  .room-amenities {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #f8f5f5;
+  }
+  
+  .room-amenities ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+  }
+  
+  .room-amenities ul li {
+    margin-bottom: 3px;
+  }
+  
+  .room-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fdfdfd;
+    margin-bottom: 20px;
+  }
+  
+  .room-details .btn-primary {
+    width: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .room-booking-page .hero-section h1 {
+      font-size: 2.5rem;
+    }
+    .room-booking-page .hero-section p {
+      font-size: 1rem;
+    }
+    .room-card {
+        width: 100%;
+    }
+  }
