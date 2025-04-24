@@ -1,0 +1,325 @@
+/* styles/LocationDetails.css */
+.location-details-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9; /* Light gray background */
+  color: #333;
+  animation: fadeIn 0.8s ease-out; /* Fade-in animation for the entire page */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hero Section */
+.hero-section {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 12px; /* Rounded corners for the hero section */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.hero-section .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)); /* Darker gradient */
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-section .location-name {
+  font-size: 3.2rem; /* Slightly smaller title */
+  font-weight: 700; /* Bolder title */
+  margin-bottom: 10px;
+}
+
+.hero-section .rating {
+  font-size: 1.1rem; /* Smaller rating text */
+  margin-bottom: 15px;
+  color: #ffc107; /* Gold color for the rating */
+}
+
+.hero-section .star {
+  color: #ffc107; /* Gold color for the star */
+  margin-right: 5px;
+}
+
+.hero-section .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #eee; /* Lighter description text */
+}
+
+/* Date Selection Bar */
+.date-selection-bar {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px; /* More rounded corners */
+  width: 95%; /* Wider date selection bar */
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: slideDown 0.6s ease-out; /* Slide-down animation */
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.date-selection-bar .location-name-small {
+  font-size: 1.4rem; /* Slightly smaller location name */
+  font-weight: 600; /* Bolder location name */
+  color: #555; /* Darker location name */
+}
+
+.date-selection-bar .MuiTextField-root {
+  margin: 0 10px;
+}
+
+.date-selection-bar .check-availability-button {
+  padding: 12px 24px; /* Larger button */
+  background: #007bff; /* Blue button */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px; /* Slightly less rounded button */
+  font-weight: 500; /* Bolder button text */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.date-selection-bar .check-availability-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Main Content Tabs */
+.main-content-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* Added a subtle bottom border */
+}
+
+.main-content-tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transition for the border */
+  color: #777; /* Darker tab text */
+}
+
+.main-content-tabs button.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff; /* Thicker active tab underline */
+  font-weight: 600; /* Bolder active tab text */
+}
+
+/* Overview Tab Content */
+.overview-tab-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 30px;
+}
+
+.overview-tab-content .main-content {
+  flex: 2; /* Approx 66% */
+}
+
+.overview-tab-content .sidebar {
+  flex: 1; /* Approx 33% */
+}
+
+.overview-tab-content h2 {
+  margin-bottom: 15px;
+  color: #444; /* Darker heading */
+  border-bottom: 1px solid #eee; /* Added a subtle bottom border */
+  padding-bottom: 5px;
+}
+
+.overview-tab-content h3 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #555; /* Slightly darker heading */
+}
+
+/* Tourist Spots Grid */
+.tourist-spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjusted minmax */
+  gap: 15px;
+}
+
+.tourist-spots-grid .tourist-spot-card {
+  background: #fff;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added shadow transition */
+}
+
+.tourist-spots-grid .tourist-spot-card:hover {
+  transform: translateY(-5px); /* Lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.tourist-spots-grid .spot-image-placeholder {
+  height: 120px; /* Increased height */
+  background: #f0f0f0; /* Lighter background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tourist-spots-grid .spot-name {
+  padding: 12px; /* Increased padding */
+  font-weight: 500; /* Bolder text */
+  color: #444; /* Darker text */
+}
+
+/* Location Info Card */
+.location-info-card {
+  background: #fff;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.location-info-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #444; /* Darker heading */
+  border-bottom: 1px solid #eee; /* Added a subtle bottom border */
+  padding-bottom: 5px;
+}
+
+.location-info-card p {
+  margin-bottom: 10px;
+  color: #666; /* Darker text */
+}
+
+.location-info-card .icon {
+  margin-right: 5px;
+  color: #007bff;
+}
+
+/* Featured Hotel Card */
+.featured-hotel-card {
+  background: #fff;
+  border-radius: 12px; /* More rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px;
+}
+
+.featured-hotel-card h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #444; /* Darker heading */
+  border-bottom: 1px solid #eee; /* Added a subtle bottom border */
+  padding-bottom: 5px;
+}
+
+.featured-hotel-card .hotel-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Added transition */
+}
+
+.featured-hotel-card .hotel-item:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.featured-hotel-card .hotel-image {
+  width: 90px; /* Slightly larger image */
+  height: 90px; /* Slightly larger image */
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.featured-hotel-card .hotel-details h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #444; /* Darker heading */
+}
+
+.featured-hotel-card .hotel-details .rating {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.featured-hotel-card .hotel-details .price {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+/* Placeholder styles for other tabs */
+.hotels-tab-content,
+.vehicles-tab-content,
+.photos-tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .overview-tab-content {
+      flex-direction: column;
+  }
+
+  .overview-tab-content .sidebar {
+      width: 100%;
+      margin-top: 30px;
+  }
+
+  .date-selection-bar {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .date-selection-bar .MuiTextField-root,
+  .date-selection-bar .check-availability-button {
+      margin: 10px 0;
+  }
+}

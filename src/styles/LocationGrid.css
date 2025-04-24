@@ -1,0 +1,152 @@
+/* styles/LocationGrid.css */
+.location-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #e1e5ea);
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  animation: fadeInContainer 1s ease-out;
+}
+
+@keyframes fadeInContainer {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.location-grid {
+  display: grid;
+  gap: 30px;
+  width: 95%;
+  max-width: 1200px;
+  z-index: 1;
+}
+
+.location-grid.two-by-three {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.location-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s ease-in-out;
+  position: relative;
+  opacity: 0;
+  animation: fadeInCard 0.5s ease-in-out forwards;
+  display: flex; /* Use flex to align image and button */
+  flex-direction: column; /* Stack image and button vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: space-between; /* Space out image and button */
+}
+
+/* Staggered fade-in effect for cards */
+.location-card:nth-child(1) { animation-delay: 0.2s; }
+.location-card:nth-child(2) { animation-delay: 0.4s; }
+.location-card:nth-child(3) { animation-delay: 0.6s; }
+.location-card:nth-child(4) { animation-delay: 0.8s; }
+.location-card:nth-child(5) { animation-delay: 1.0s; }
+.location-card:nth-child(6) { animation-delay: 1.2s; }
+
+@keyframes fadeInCard {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.location-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-grow: 1; /* Allow image to take up more space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.location-card:hover .placeholder-img {
+  transform: scale(1.08);
+}
+
+.location-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #00bcd4, #008394);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 188, 212, 0.3);
+  animation: gradientShift 3s ease-in-out infinite alternate;
+  background-size: 200% 200%;
+  width: 100%; /* Make the button full width of the card */
+  text-align: center;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.location-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 188, 212, 0.5);
+}
+
+@keyframes gradientShift {
+  0% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(135deg, #00bcd4, #27aa90);
+  }
+  50% {
+      background-position: 100% 50%;
+      background-image: linear-gradient(135deg, #2cb768, #10a8ad);
+  }
+  100% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(135deg, #00bcd4, #008394);
+  }
+}
+
+/* Responsive adjustments for 2x3 layout */
+@media (max-width: 1200px) {
+  .location-grid.two-by-three {
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .location-grid.two-by-three {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .location-grid.two-by-three {
+      grid-template-columns: 1fr;
+  }
+}

@@ -36,7 +36,7 @@ const NavBar = () => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="ms-auto align-items-center">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/rooms">Rooms</Nav.Link>
+            <Nav.Link href="/locations">Locations</Nav.Link>
             <Nav.Link href="/vehicles">Vehicles Catalog</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>

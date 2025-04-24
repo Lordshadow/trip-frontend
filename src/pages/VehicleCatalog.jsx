@@ -6,7 +6,7 @@ const vehicles = [
   { id: 1, name: "Sedan", image: "https://via.placeholder.com/300x200", capacity: "5 Passengers", description: "A comfortable sedan for city commutes and small families." },
   { id: 2, name: "SUV", image: "https://via.placeholder.com/300x200", capacity: "7 Passengers", description: "A spacious SUV perfect for families and adventurous trips." },
   { id: 3, name: "Van", image: "https://via.placeholder.com/300x200", capacity: "12 Passengers", description: "Ideal for larger groups and airport transfers." },
-  { id: 4, name: "Mini Bus", image: "https://via.placeholder.com/300x200", capacity: "30 Passengers", description: "Suitable for medium-sized groups and tours." },
+  { id: 4, name: "Mini Bus", image: "https://via.placeholder.com/300x200", capacity: "20 Passengers", description: "Suitable for medium-sized groups and tours." },
   { id: 5, name: "Mid-size Bus", image: "https://via.placeholder.com/300x200", capacity: "30 Passengers", description: "Comfortable bus for city tours and group travel." },
   { id: 6, name: "Luxury Bus", image: "https://via.placeholder.com/300x200", capacity: "54 Passengers", description: "Premium bus with enhanced comfort for long journeys." },
 ];
