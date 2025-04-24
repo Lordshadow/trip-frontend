@@ -33,10 +33,10 @@
       }
     ],
     "touristSpots": [
-      { "name": "Yercaud Hill Station", "image": "/images/salem-spot1.jpg" },
-      { "name": "Kottai Mariamman Temple", "image": "/images/salem-spot2.jpg" },
+      { "name": "Yercaud Hill Station", "image": "/src/assets/yercaud.jpg" },
+      { "name": "Kottai Mariamman Temple", "image": "/src/assets/kas.jpg" },
       { "name": "Muthumalai Murugan Temple", "image": "/src/assets/salem.jpg" },
-      { "name": "Mettur Dam (nearby)", "image": "/images/salem-spot4.jpg" }
+      { "name": "Mettur Dam (nearby)", "image": "/src/assets/mettur.jpg" }
     ],
     "reviews": [
       {
@@ -78,7 +78,7 @@
     "reviewCount": 95,
     "touristSpotsCount": 6,
     "description": "Namakkal, known for its massive Anjaneyar (Hanuman) statue and rock fort, is a significant agricultural and poultry hub in Tamil Nadu. Experience the blend of religious importance and local industry in this town.",
-    "image": "/images/namakkal-hero.jpg",
+    "image": "/src/assets/kolli.jpg",
     "bestTimeToVisit": "October to March",
     "hotels": [
       {
@@ -104,10 +104,10 @@
       }
     ],
     "touristSpots": [
-      { "name": "Namakkal Anjaneyar Temple", "image": "/images/namakkal-spot1.jpg" },
-      { "name": "Namakkal Rock Fort", "image": "/images/namakkal-spot2.jpg" },
-      { "name": "Narasimha Swamy Temple", "image": "/images/namakkal-spot3.jpg" },
-      { "name": "Kolli Hills (nearby)", "image": "/images/namakkal-spot4.jpg" }
+      { "name": "Namakkal Anjaneyar Temple", "image": "/src/assets/ajn1.jpg" },
+      { "name": "Namakkal Rock Fort", "image": "/src/assets/nrf.jpg" },
+      { "name": "Narasimha Swamy Temple", "image": "/src/assets/nrs.jpg" },
+      { "name": "Kolli Hills (nearby)", "image": "/src/assets/kolli.jpg" }
     ],
     "reviews": [
       {
@@ -143,13 +143,13 @@
     ]
   },
   {
-    "name": "Tiruchirappalli (Trichy)",
+    "name": "Trichy",
     "country": "India",
     "rating": 4.6,
     "reviewCount": 150,
     "touristSpotsCount": 9,
     "description": "Trichy, situated on the banks of the Cauvery River, is known for its iconic Rockfort Temple, Sri Ranganathaswamy Temple in Srirangam, and rich Chola dynasty history. Explore the architectural marvels and spiritual significance of this ancient city.",
-    "image": "/images/trichy-hero.jpg",
+    "image": "/src/assets/kallanai.jpg",
     "bestTimeToVisit": "October to March",
     "hotels": [
       {
@@ -175,10 +175,10 @@
       }
     ],
     "touristSpots": [
-      { "name": "Rockfort Temple", "image": "/images/trichy-spot1.jpg" },
-      { "name": "Sri Ranganathaswamy Temple, Srirangam", "image": "/images/trichy-spot2.jpg" },
-      { "name": "Jambukeswarar Temple, Thiruvanaikoil", "image": "/images/trichy-spot3.jpg" },
-      { "name": "Kallanai Dam", "image": "/images/trichy-spot4.jpg" }
+      { "name": "Rockfort Temple", "image": "/src/assets/rf.jpg" },
+      { "name": "Sri Ranganathaswamy Temple, Srirangam", "image": "/src/assets/sri rangam.jpg" },
+      { "name": "Jambukeswarar Temple, Thiruvanaikoil", "image": "/src/assets/jkt.jpg" },
+      { "name": "Kallanai Dam", "image": "/src/assets/kallanai.jpg" }
     ],
     "reviews": [
       {
@@ -220,7 +220,7 @@
     "reviewCount": 80,
     "touristSpotsCount": 5,
     "description": "Kodaikanal, an tourist spot known for its Natural and Adventural places, also holds historical significance with ancient spots. Experience the local economy and the spiritual side of this Hill Station.",
-    "image": "/images/karur-hero.jpg",
+    "image": "/src/assets/kodai.jpg",
     "bestTimeToVisit": "November to February",
     "hotels": [
       {
@@ -246,15 +246,15 @@
       }
     ],
     "touristSpots": [
-      { "name": "Guna caves", "image": "/images/karur-spot1.jpg" },
-      { "name": "Pine Forest", "image": "/images/karur-spot2.jpg" },
-      { "name": "Kodaikanal lake", "image": "/images/karur-spot3.jpg" },
-      { "name": "Piller rocks road", "image": "/images/karur-spot4.jpg" }
+      { "name": "Guna caves", "image": "/src/assets/gc2.jpg" },
+      { "name": "Pine Forest", "image": "/src/assets/pf.jpg" },
+      { "name": "Kodaikanal lake", "image": "/src/assets/lake.jpg" },
+      { "name": "Piller rocks road", "image": "/src/assets/pr.jpg" }
     ],
     "reviews": [
       {
         "rating": 4,
-        "text": "Visited the Pasupathieswarar Temple, it's quite old and beautiful.",
+        "text": "Visited the Kurunji Andavar Temple, it's quite old and beautiful.",
         "author": "Vivek Sharma",
         "location": "Indore",
         "date": "December 2024",
@@ -262,7 +262,7 @@
       },
       {
         "rating": 3,
-        "text": "A quiet town with some interesting temples.",
+        "text": "A happening place with some interesting places.",
         "author": "Sneha Reddy",
         "location": "Hyderabad",
         "date": "January 2025",
@@ -270,7 +270,7 @@
       },
       {
         "rating": 4,
-        "text": "Good for a short stopover.",
+        "text": "Good for a natural stopover.",
         "author": "Amit Verma",
         "location": "Nagpur",
         "date": "February 2025",
@@ -291,7 +291,7 @@
     "reviewCount": 180,
     "touristSpotsCount": 11,
     "description": "Coimbatore, often referred to as the 'Manchester of South India,' is a major industrial and textile hub. Surrounded by the Western Ghats, it offers a blend of urban life and natural beauty, with pleasant weather and numerous attractions.",
-    "image": "/images/coimbatore-hero.jpg",
+    "image": "/src/assets/coimbatore.jpg",
     "bestTimeToVisit": "September to March",
     "hotels": [
       {
@@ -317,10 +317,10 @@
       }
     ],
     "touristSpots": [
-      { "name": "Adiyogi Shiva Statue", "image": "/images/coimbatore-spot1.jpg" },
-      { "name": "Marudamalai Temple", "image": "/images/coimbatore-spot2.jpg" },
-      { "name": "VOC Park and Zoo", "image": "/images/coimbatore-spot3.jpg" },
-      { "name": "Black Thunder Theme Park (nearby)", "image": "/images/coimbatore-spot4.jpg" }
+      { "name": "Adiyogi Shiva Statue", "image": "/src/assets/coimbatore.jpg" },
+      { "name": "Marudhamalai Temple", "image": "/src/assets/maruthamalai.jpg" },
+      { "name": "VOC Park and Zoo", "image": "/src/assets/voc.jpg" },
+      { "name": "Black Thunder Theme Park (nearby)", "image": "/src/assets/bt.jpg" }
     ],
     "reviews": [
       {
@@ -362,7 +362,7 @@
     "reviewCount": 70,
     "touristSpotsCount": 4,
     "description": "Rameshwaram, a revered pilgrimage destination in Tamil Nadu, is famous for its Ramanathaswamy Temple,Dhanushkodi,Abdulkalam memorial and the iconic Pamban Bridge.",
-    "image": "/images/erode-hero.jpg",
+    "image": "/src/assets/ram.jpg",
     "bestTimeToVisit": "December to February",
     "hotels": [
       {
@@ -370,10 +370,10 @@
         "rating": 4.0,
         "price": "₹1600",
         "image": "/images/erode-hotel1.jpg",
-        "description": "Comfortable hotel in the heart of Erode, offering good service."
+        "description": "Comfortable hotel in the heart of Rameshwaram, offering good service."
       },
       {
-        "name": "Hotel Tamilnadu Erode (TTDC)",
+        "name": "Hotel Tamilnadu Rameshwaram (TTDC)",
         "rating": 3.8,
         "price": "₹1400",
         "image": "/images/erode-hotel2.jpg",
@@ -384,19 +384,19 @@
         "rating": 3.9,
         "price": "₹1500",
         "image": "/images/erode-hotel3.jpg",
-        "description": "A decent option for a short stay in Erode."
+        "description": "A decent option for a short stay in Rameshwaram."
       }
     ],
     "touristSpots": [
-      { "name": "Dhanush Kodi", "image": "/assets/ram.jpg" },
-      { "name": "Abdulkalam Memorial", "image": "/images/erode-spot2.jpg" },
-      { "name": "Pamban Bridge", "image": "/images/erode-spot3.jpg" },
-      { "name": "Ramanathaswamy Temple", "image": "/images/erode-spot4.jpg" }
+      { "name": "Dhanush Kodi", "image": "/src/assets/ram.jpg" },
+      { "name": "Abdulkalam Memorial", "image": "/src/assets/apj.jpg" },
+      { "name": "Pamban Bridge", "image": "/src/assets/pb.jpg" },
+      { "name": "Ramanathaswamy Temple", "image": "/src/assets/ramanathaswamy.jpg" }
     ],
     "reviews": [
       {
         "rating": 4,
-        "text": "Visited the Sangameshwarar Temple, it's a peaceful place.",
+        "text": "Visited the Ramanathaswamy Temple, it's a peaceful place.",
         "author": "Karthik Raja",
         "location": "Coimbatore",
         "date": "January 2025",
@@ -404,7 +404,7 @@
       },
       {
         "rating": 3,
-        "text": "Erode is mainly an industrial city, but the temples are worth a visit.",
+        "text": "Rameshwaram is an historical place,the temples are worth a visit.",
         "author": "Pooja Sharma",
         "location": "Bangalore",
         "date": "February 2025",
@@ -412,7 +412,7 @@
       },
       {
         "rating": 4,
-        "text": "Good for a business trip, with decent accommodation options.",
+        "text": "Good for a devotional trip, with decent accommodation options.",
         "author": "Arun Kumar",
         "location": "Chennai",
         "date": "March 2025",
