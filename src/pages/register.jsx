@@ -133,7 +133,7 @@ const Register = () => {
       await reload(auth.currentUser);
       if (auth.currentUser.emailVerified) {
         alert('Email verified successfully! You can now log in.');
-        navigate('/signup');
+        navigate('/login');
       } else {
         alert('Email not verified yet. Please check your inbox and click the verification link.');
       }
@@ -241,7 +241,7 @@ const Register = () => {
               )}
 
               <p className="mt-3 text-center">
-                Already have an account? <Link to="/signin">Sign In</Link>
+                Already have an account? <Link to="/login">Sign In</Link>
               </p>
             </div>
           </Col>
