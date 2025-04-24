@@ -7,7 +7,7 @@
     "reviewCount": 125,
     "touristSpotsCount": 8,
     "description": "Salem, a vibrant city in Tamil Nadu, is known for its historical temples, bustling markets, and the scenic beauty of the surrounding hills. Explore ancient Dravidian architecture and experience the rich cultural heritage of this region.",
-    "image": "/images/salem-hero.jpg",
+    "image": "/src/assets/salem.jpg",
     "bestTimeToVisit": "October to March",
     "hotels": [
       {
@@ -35,7 +35,7 @@
     "touristSpots": [
       { "name": "Yercaud Hill Station", "image": "/images/salem-spot1.jpg" },
       { "name": "Kottai Mariamman Temple", "image": "/images/salem-spot2.jpg" },
-      { "name": "Sugavaneshwarar Temple", "image": "/images/salem-spot3.jpg" },
+      { "name": "Muthumalai Murugan Temple", "image": "/src/assets/salem.jpg" },
       { "name": "Mettur Dam (nearby)", "image": "/images/salem-spot4.jpg" }
     ],
     "reviews": [
@@ -214,12 +214,12 @@
     ]
   },
   {
-    "name": "Karur",
+    "name": "Kodaikanal",
     "country": "India",
     "rating": 4.2,
     "reviewCount": 80,
     "touristSpotsCount": 5,
-    "description": "Karur, an industrial hub known for its textile and bus body building industries, also holds historical significance with ancient temples. Experience the local economy and the spiritual side of this developing city.",
+    "description": "Kodaikanal, an tourist spot known for its Natural and Adventural places, also holds historical significance with ancient spots. Experience the local economy and the spiritual side of this Hill Station.",
     "image": "/images/karur-hero.jpg",
     "bestTimeToVisit": "November to February",
     "hotels": [
@@ -246,10 +246,10 @@
       }
     ],
     "touristSpots": [
-      { "name": "Pasupathieswarar Temple", "image": "/images/karur-spot1.jpg" },
-      { "name": "Mariyamman Temple", "image": "/images/karur-spot2.jpg" },
-      { "name": "Venkataramana Swamy Temple", "image": "/images/karur-spot3.jpg" },
-      { "name": "Ayyappan Temple", "image": "/images/karur-spot4.jpg" }
+      { "name": "Guna caves", "image": "/images/karur-spot1.jpg" },
+      { "name": "Pine Forest", "image": "/images/karur-spot2.jpg" },
+      { "name": "Kodaikanal lake", "image": "/images/karur-spot3.jpg" },
+      { "name": "Piller rocks road", "image": "/images/karur-spot4.jpg" }
     ],
     "reviews": [
       {
@@ -356,12 +356,12 @@
     ]
   },
   {
-    "name": "Erode",
+    "name": "Rameshwaram",
     "country": "India",
     "rating": 4.1,
     "reviewCount": 70,
     "touristSpotsCount": 4,
-    "description": "Erode, known as 'Textile City' for its significant textile industry, is also home to several temples and historical sites along the banks of the Bhavani and Cauvery rivers. Experience the industrial and cultural aspects of this region.",
+    "description": "Rameshwaram, a revered pilgrimage destination in Tamil Nadu, is famous for its Ramanathaswamy Temple,Dhanushkodi,Abdulkalam memorial and the iconic Pamban Bridge.",
     "image": "/images/erode-hero.jpg",
     "bestTimeToVisit": "December to February",
     "hotels": [
@@ -388,10 +388,10 @@
       }
     ],
     "touristSpots": [
-      { "name": "Bhavani Sangameshwarar Temple", "image": "/images/erode-spot1.jpg" },
-      { "name": "Thindal Murugan Temple", "image": "/images/erode-spot2.jpg" },
-      { "name": "Erode Fort", "image": "/images/erode-spot3.jpg" },
-      { "name": "Government Museum Erode", "image": "/images/erode-spot4.jpg" }
+      { "name": "Dhanush Kodi", "image": "/assets/ram.jpg" },
+      { "name": "Abdulkalam Memorial", "image": "/images/erode-spot2.jpg" },
+      { "name": "Pamban Bridge", "image": "/images/erode-spot3.jpg" },
+      { "name": "Ramanathaswamy Temple", "image": "/images/erode-spot4.jpg" }
     ],
     "reviews": [
       {

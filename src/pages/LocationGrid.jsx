@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/LocationGrid.css';
+import salem from'../assets/salem.jpg';
+import kolli from'../assets/kolli.jpg';
+import trichy from'../assets/kallanai.jpg';
+import kodai from'../assets/kodai.jpg';
+import kovai from'../assets/coimbatore.jpg';
+import ram from'../assets/ram.jpg';
 
 const locations = [
-    { name: 'Salem', image: 'placeholder1.jpg' },
-    { name: 'Namakkal', image: 'placeholder2.jpg' },
-    { name: 'Trichy', image: 'placeholder3.jpg' },
-    { name: 'Karur', image: 'placeholder4.jpg' },
-    { name: 'Coimbatore', image: 'placeholder5.jpg' },
-    { name: 'Erode', image: 'placeholder6.jpg' },
+    { name: 'Salem', image: salem },
+    { name: 'Namakkal', image: kolli },
+    { name: 'Trichy', image: trichy },
+    { name: 'Kodaikanal', image: kodai },
+    { name: 'Coimbatore', image: kovai },
+    { name: 'Rameshwaram', image: ram },
 ];
 
 const LocationGrid = () => {
