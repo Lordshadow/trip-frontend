@@ -323,3 +323,391 @@
       margin: 10px 0;
   }
 }
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.hotel-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card .hotel-image-large {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.hotel-card .hotel-info {
+  padding: 20px;
+}
+
+.hotel-card .hotel-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hotel-card .hotel-info .description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.hotel-card .hotel-info .rating {
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.hotel-card .hotel-info .price {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.hotel-card .hotel-info button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.hotel-card .hotel-info button:hover {
+  background-color: #0056b3;
+}
+
+
+/* Small description for featured hotels in overview */
+.featured-hotel-card .hotel-details .description-small {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.photos-tab-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left; /* Align content to the left */
+}
+
+.photos-tab-content h2 {
+  color: #444;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.photos-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.photos-reviews-grid .photo-review-item {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Traveler Reviews Section */
+.traveler-reviews-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align review content to the left */
+}
+
+.traveler-reviews-section h2 {
+  color: #444;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.traveler-reviews-section .reviews-intro {
+  color: #666;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.traveler-reviews-section .reviews-scrolling-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  align-items: flex-start; /* Align items to the start vertically */
+  padding: 20px 0;
+  margin-bottom: 30px;
+  scroll-snap-type: none;
+}
+
+.traveler-reviews-section .reviews-grid.scrolling {
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+  width: fit-content;
+  justify-content: flex-start;
+}
+
+.traveler-reviews-section .review-card.scrolling-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, z-index 0.3s ease-in-out;
+  transform-origin: center center;
+  opacity: 0.7;
+  scale: 0.85;
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.traveler-reviews-section .review-card .rating {
+  color: #ffc107;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.traveler-reviews-section .review-card .star {
+  margin-right: 3px;
+}
+
+.traveler-reviews-section .review-card .empty-star {
+  color: #ccc;
+}
+
+.traveler-reviews-section .review-card .review-text {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.traveler-reviews-section .review-card .author-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Added some top margin */
+}
+
+.traveler-reviews-section .review-card .author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.traveler-reviews-section .review-card .author-details {
+  flex-grow: 1;
+  text-align: left; /* Align author details to the left */
+}
+
+.traveler-reviews-section .review-card .author-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2px;
+}
+
+.traveler-reviews-section .review-card .author-location {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.traveler-reviews-section .read-all-reviews {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.traveler-reviews-section .read-all-reviews button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.traveler-reviews-section .read-all-reviews button:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+}
+
+.traveler-reviews-section .read-all-reviews .arrow-right {
+  margin-left: 5px;
+}
+
+/* styles/LocationDetails.css */
+.location-details-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9; /* Light gray background */
+  color: #333;
+  animation: fadeIn 0.8s ease-out; /* Fade-in animation for the entire page */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hero Section */
+.hero-section {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 12px; /* Rounded corners for the hero section */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.hero-section .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)); /* Darker gradient */
+}
+
+.hero-section .hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  animation: fadeInSlideUp 0.8s ease-out forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-section .location-name {
+  font-size: 3.2rem; /* Slightly smaller title */
+  font-weight: 700; /* Bolder title */
+  margin-bottom: 10px;
+}
+
+.hero-section .rating {
+  font-size: 1.1rem; /* Smaller rating text */
+  margin-bottom: 15px;
+  color: #ffc107; /* Gold color for the rating */
+}
+
+.hero-section .star {
+  color: #ffc107; /* Gold color for the star */
+  margin-right: 5px;
+}
+
+.hero-section .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #eee; /* Lighter description text */
+}
+
+/* Date Selection Bar */
+.date-selection-bar {
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px; /* More rounded corners */
+  width: 95%; /* Wider date selection bar */
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: slideDown 0.6s ease-out; /* Slide-down animation */
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.date-selection-bar .location-name-small {
+  font-size: 1.4rem; /* Slightly smaller location name */
+  font-weight: 600; /* Bolder location name */
+  color: #555; /* Darker location name */
+}
+
+.date-selection-bar .MuiTextField-root {
+  margin: 0 10px;
+}
+
+.date-selection-bar .check-availability-button {
+  padding: 12px 24px; /* Larger button */
+  background: #007bff; /* Blue button */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px; /* Slightly less rounded button */
+  font-weight: 500; /* Bolder button text */
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.date-selection-bar .check-availability-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Main Content Tabs */
+.main-content-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd; /* Added a subtle bottom border */
+}
+
+.main-content-tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Transition for the border */
+  color: #777; /* Darker tab text */
+}
+
+.main-content-tabs button.active {
+  color: #007bff;
+  border-bottom: 3px solid #007bff; /* Thicker active tab underline */
+  font-weight: 600; 
+}/* B
+}

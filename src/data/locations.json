@@ -1,0 +1,429 @@
+[
+  {
+    "name": "Salem",
+    "country": "India",
+    "rating": 4.5,
+    "reviewCount": 125,
+    "touristSpotsCount": 8,
+    "description": "Salem, a vibrant city in Tamil Nadu, is known for its historical temples, bustling markets, and the scenic beauty of the surrounding hills. Explore ancient Dravidian architecture and experience the rich cultural heritage of this region.",
+    "image": "/images/salem-hero.jpg",
+    "bestTimeToVisit": "October to March",
+    "hotels": [
+      {
+        "name": "The Grand Palace Hotel Salem",
+        "rating": 4.8,
+        "price": "₹3500",
+        "image": "/images/salem-hotel1.jpg",
+        "description": "Luxury accommodation in the heart of Salem, offering modern amenities and excellent service."
+      },
+      {
+        "name": "Hotel Annapoorna Salem",
+        "rating": 4.2,
+        "price": "₹2200",
+        "image": "/images/salem-hotel2.jpg",
+        "description": "Comfortable and conveniently located hotel with great dining options."
+      },
+      {
+        "name": "Lathika Residency",
+        "rating": 3.9,
+        "price": "₹1800",
+        "image": "/images/salem-hotel3.jpg",
+        "description": "Budget-friendly stay with essential amenities, ideal for short trips."
+      }
+    ],
+    "touristSpots": [
+      { "name": "Yercaud Hill Station", "image": "/images/salem-spot1.jpg" },
+      { "name": "Kottai Mariamman Temple", "image": "/images/salem-spot2.jpg" },
+      { "name": "Sugavaneshwarar Temple", "image": "/images/salem-spot3.jpg" },
+      { "name": "Mettur Dam (nearby)", "image": "/images/salem-spot4.jpg" }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "text": "Loved my stay in Salem! The city has a unique charm, and the hotel was fantastic.",
+        "author": "Priya Sharma",
+        "location": "Mumbai",
+        "date": "March 2025",
+        "avatar": "/images/avatar1.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Good experience exploring the temples and the nearby Yercaud hills.",
+        "author": "John Davis",
+        "location": "London",
+        "date": "April 2025",
+        "avatar": "/images/avatar2.jpg"
+      },
+      {
+        "rating": 5,
+        "text": "The local cuisine was delicious, and the people were very welcoming.",
+        "author": "Aisha Khan",
+        "location": "Delhi",
+        "date": "February 2025",
+        "avatar": "/images/avatar3.jpg"
+      }
+    ],
+    "photos": [
+      "/images/salem-photo1.jpg",
+      "/images/salem-photo2.jpg",
+      "/images/salem-photo3.jpg",
+      "/images/salem-photo4.jpg"
+    ]
+  },
+  {
+    "name": "Namakkal",
+    "country": "India",
+    "rating": 4.3,
+    "reviewCount": 95,
+    "touristSpotsCount": 6,
+    "description": "Namakkal, known for its massive Anjaneyar (Hanuman) statue and rock fort, is a significant agricultural and poultry hub in Tamil Nadu. Experience the blend of religious importance and local industry in this town.",
+    "image": "/images/namakkal-hero.jpg",
+    "bestTimeToVisit": "October to March",
+    "hotels": [
+      {
+        "name": "Hotel SSK Grand",
+        "rating": 4.1,
+        "price": "₹2000",
+        "image": "/images/namakkal-hotel1.jpg",
+        "description": "Modern hotel offering comfortable rooms and essential amenities."
+      },
+      {
+        "name": "Hotel Vasantham",
+        "rating": 3.8,
+        "price": "₹1500",
+        "image": "/images/namakkal-hotel2.jpg",
+        "description": "Budget-friendly hotel suitable for a short stay."
+      },
+      {
+        "name": "Nala Hotels",
+        "rating": 4.0,
+        "price": "₹1800",
+        "image": "/images/namakkal-hotel3.jpg",
+        "description": "Decent hotel with good service and basic facilities."
+      }
+    ],
+    "touristSpots": [
+      { "name": "Namakkal Anjaneyar Temple", "image": "/images/namakkal-spot1.jpg" },
+      { "name": "Namakkal Rock Fort", "image": "/images/namakkal-spot2.jpg" },
+      { "name": "Narasimha Swamy Temple", "image": "/images/namakkal-spot3.jpg" },
+      { "name": "Kolli Hills (nearby)", "image": "/images/namakkal-spot4.jpg" }
+    ],
+    "reviews": [
+      {
+        "rating": 4,
+        "text": "The Anjaneyar statue is truly impressive. A must-visit place in Namakkal.",
+        "author": "Ramesh Kumar",
+        "location": "Chennai",
+        "date": "November 2024",
+        "avatar": "/images/avatar4.jpg"
+      },
+      {
+        "rating": 3,
+        "text": "The fort offers a good view of the town.",
+        "author": "Geetha Nair",
+        "location": "Bangalore",
+        "date": "January 2025",
+        "avatar": "/images/avatar5.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "A peaceful town with religious significance.",
+        "author": "Suresh Babu",
+        "location": "Madurai",
+        "date": "December 2024",
+        "avatar": "/images/avatar6.jpg"
+      }
+    ],
+    "photos": [
+      "/images/namakkal-photo1.jpg",
+      "/images/namakkal-photo2.jpg",
+      "/images/namakkal-photo3.jpg",
+      "/images/namakkal-photo4.jpg"
+    ]
+  },
+  {
+    "name": "Tiruchirappalli (Trichy)",
+    "country": "India",
+    "rating": 4.6,
+    "reviewCount": 150,
+    "touristSpotsCount": 9,
+    "description": "Trichy, situated on the banks of the Cauvery River, is known for its iconic Rockfort Temple, Sri Ranganathaswamy Temple in Srirangam, and rich Chola dynasty history. Explore the architectural marvels and spiritual significance of this ancient city.",
+    "image": "/images/trichy-hero.jpg",
+    "bestTimeToVisit": "October to March",
+    "hotels": [
+      {
+        "name": "Grand Estancia - GRT Hotels",
+        "rating": 4.7,
+        "price": "₹2800",
+        "image": "/images/trichy-hotel1.jpg",
+        "description": "Well-appointed rooms and excellent hospitality, part of a renowned hotel chain."
+      },
+      {
+        "name": "Sangam Hotel Trichy",
+        "rating": 4.3,
+        "price": "₹2200",
+        "image": "/images/trichy-hotel2.jpg",
+        "description": "A comfortable stay with good amenities and a central location."
+      },
+      {
+        "name": "Hotel Femina",
+        "rating": 4.0,
+        "price": "₹1900",
+        "image": "/images/trichy-hotel3.jpg",
+        "description": "A reliable hotel offering value for money and good service."
+      }
+    ],
+    "touristSpots": [
+      { "name": "Rockfort Temple", "image": "/images/trichy-spot1.jpg" },
+      { "name": "Sri Ranganathaswamy Temple, Srirangam", "image": "/images/trichy-spot2.jpg" },
+      { "name": "Jambukeswarar Temple, Thiruvanaikoil", "image": "/images/trichy-spot3.jpg" },
+      { "name": "Kallanai Dam", "image": "/images/trichy-spot4.jpg" }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "text": "The Rockfort Temple climb was worth the view! Srirangam is also magnificent.",
+        "author": "Lakshmi Menon",
+        "location": "Kochi",
+        "date": "December 2024",
+        "avatar": "/images/avatar7.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Trichy has a rich history and beautiful temples.",
+        "author": "Rajesh Patel",
+        "location": "Ahmedabad",
+        "date": "February 2025",
+        "avatar": "/images/avatar8.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Enjoyed the local culture and the peaceful atmosphere.",
+        "author": "Susan White",
+        "location": "Sydney",
+        "date": "January 2025",
+        "avatar": "/images/avatar9.jpg"
+      }
+    ],
+    "photos": [
+      "/images/trichy-photo1.jpg",
+      "/images/trichy-photo2.jpg",
+      "/images/trichy-photo3.jpg",
+      "/images/trichy-photo4.jpg"
+    ]
+  },
+  {
+    "name": "Karur",
+    "country": "India",
+    "rating": 4.2,
+    "reviewCount": 80,
+    "touristSpotsCount": 5,
+    "description": "Karur, an industrial hub known for its textile and bus body building industries, also holds historical significance with ancient temples. Experience the local economy and the spiritual side of this developing city.",
+    "image": "/images/karur-hero.jpg",
+    "bestTimeToVisit": "November to February",
+    "hotels": [
+      {
+        "name": "Hotel Hemalaatha",
+        "rating": 4.0,
+        "price": "₹1700",
+        "image": "/images/karur-hotel1.jpg",
+        "description": "Decent hotel offering comfortable accommodation for business and leisure travelers."
+      },
+      {
+        "name": "Kavitha Residency",
+        "rating": 3.7,
+        "price": "₹1300",
+        "image": "/images/karur-hotel2.jpg",
+        "description": "Budget-friendly option with basic amenities."
+      },
+      {
+        "name": "Hotel Green Park",
+        "rating": 3.9,
+        "price": "₹1500",
+        "image": "/images/karur-hotel3.jpg",
+        "description": "A standard hotel providing essential facilities."
+      }
+    ],
+    "touristSpots": [
+      { "name": "Pasupathieswarar Temple", "image": "/images/karur-spot1.jpg" },
+      { "name": "Mariyamman Temple", "image": "/images/karur-spot2.jpg" },
+      { "name": "Venkataramana Swamy Temple", "image": "/images/karur-spot3.jpg" },
+      { "name": "Ayyappan Temple", "image": "/images/karur-spot4.jpg" }
+    ],
+    "reviews": [
+      {
+        "rating": 4,
+        "text": "Visited the Pasupathieswarar Temple, it's quite old and beautiful.",
+        "author": "Vivek Sharma",
+        "location": "Indore",
+        "date": "December 2024",
+        "avatar": "/images/avatar10.jpg"
+      },
+      {
+        "rating": 3,
+        "text": "A quiet town with some interesting temples.",
+        "author": "Sneha Reddy",
+        "location": "Hyderabad",
+        "date": "January 2025",
+        "avatar": "/images/avatar11.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Good for a short stopover.",
+        "author": "Amit Verma",
+        "location": "Nagpur",
+        "date": "February 2025",
+        "avatar": "/images/avatar12.jpg"
+      }
+    ],
+    "photos": [
+      "/images/karur-photo1.jpg",
+      "/images/karur-photo2.jpg",
+      "/images/karur-photo3.jpg",
+      "/images/karur-photo4.jpg"
+    ]
+  },
+  {
+    "name": "Coimbatore",
+    "country": "India",
+    "rating": 4.7,
+    "reviewCount": 180,
+    "touristSpotsCount": 11,
+    "description": "Coimbatore, often referred to as the 'Manchester of South India,' is a major industrial and textile hub. Surrounded by the Western Ghats, it offers a blend of urban life and natural beauty, with pleasant weather and numerous attractions.",
+    "image": "/images/coimbatore-hero.jpg",
+    "bestTimeToVisit": "September to March",
+    "hotels": [
+      {
+        "name": "The Residency Towers Coimbatore",
+        "rating": 4.8,
+        "price": "₹3800",
+        "image": "/images/coimbatore-hotel1.jpg",
+        "description": "Luxury hotel with excellent amenities and a prime location."
+      },
+      {
+        "name": "Radisson Blu Hotel Coimbatore",
+        "rating": 4.6,
+        "price": "₹3200",
+        "image": "/images/coimbatore-hotel2.jpg",
+        "description": "Modern hotel offering comfortable rooms and great dining options."
+      },
+      {
+        "name": "Vivanta Coimbatore",
+        "rating": 4.5,
+        "price": "₹3000",
+        "image": "/images/coimbatore-hotel3.jpg",
+        "description": "Stylish hotel known for its hospitality and contemporary design."
+      }
+    ],
+    "touristSpots": [
+      { "name": "Adiyogi Shiva Statue", "image": "/images/coimbatore-spot1.jpg" },
+      { "name": "Marudamalai Temple", "image": "/images/coimbatore-spot2.jpg" },
+      { "name": "VOC Park and Zoo", "image": "/images/coimbatore-spot3.jpg" },
+      { "name": "Black Thunder Theme Park (nearby)", "image": "/images/coimbatore-spot4.jpg" }
+    ],
+    "reviews": [
+      {
+        "rating": 5,
+        "text": "The Adiyogi statue is breathtaking! Coimbatore has a nice vibe.",
+        "author": "Prakash Verma",
+        "location": "Pune",
+        "date": "January 2025",
+        "avatar": "/images/avatar13.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Enjoyed the pleasant weather and the local markets.",
+        "author": "Divya Nair",
+        "location": "Bangalore",
+        "date": "February 2025",
+        "avatar": "/images/avatar14.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Good blend of city life and nature.",
+        "author": "Robert Smith",
+        "location": "London",
+        "date": "March 2025",
+        "avatar": "/images/avatar15.jpg"
+      }
+    ],
+    "photos": [
+      "/images/coimbatore-photo1.jpg",
+      "/images/coimbatore-photo2.jpg",
+      "/images/coimbatore-photo3.jpg",
+      "/images/coimbatore-photo4.jpg"
+    ]
+  },
+  {
+    "name": "Erode",
+    "country": "India",
+    "rating": 4.1,
+    "reviewCount": 70,
+    "touristSpotsCount": 4,
+    "description": "Erode, known as 'Textile City' for its significant textile industry, is also home to several temples and historical sites along the banks of the Bhavani and Cauvery rivers. Experience the industrial and cultural aspects of this region.",
+    "image": "/images/erode-hero.jpg",
+    "bestTimeToVisit": "December to February",
+    "hotels": [
+      {
+        "name": "Hotel Radha Prasad",
+        "rating": 4.0,
+        "price": "₹1600",
+        "image": "/images/erode-hotel1.jpg",
+        "description": "Comfortable hotel in the heart of Erode, offering good service."
+      },
+      {
+        "name": "Hotel Tamilnadu Erode (TTDC)",
+        "rating": 3.8,
+        "price": "₹1400",
+        "image": "/images/erode-hotel2.jpg",
+        "description": "A government-run hotel offering basic and affordable accommodation."
+      },
+      {
+        "name": "SS Grand Inn",
+        "rating": 3.9,
+        "price": "₹1500",
+        "image": "/images/erode-hotel3.jpg",
+        "description": "A decent option for a short stay in Erode."
+      }
+    ],
+    "touristSpots": [
+      { "name": "Bhavani Sangameshwarar Temple", "image": "/images/erode-spot1.jpg" },
+      { "name": "Thindal Murugan Temple", "image": "/images/erode-spot2.jpg" },
+      { "name": "Erode Fort", "image": "/images/erode-spot3.jpg" },
+      { "name": "Government Museum Erode", "image": "/images/erode-spot4.jpg" }
+    ],
+    "reviews": [
+      {
+        "rating": 4,
+        "text": "Visited the Sangameshwarar Temple, it's a peaceful place.",
+        "author": "Karthik Raja",
+        "location": "Coimbatore",
+        "date": "January 2025",
+        "avatar": "/images/avatar16.jpg"
+      },
+      {
+        "rating": 3,
+        "text": "Erode is mainly an industrial city, but the temples are worth a visit.",
+        "author": "Pooja Sharma",
+        "location": "Bangalore",
+        "date": "February 2025",
+        "avatar": "/images/avatar17.jpg"
+      },
+      {
+        "rating": 4,
+        "text": "Good for a business trip, with decent accommodation options.",
+        "author": "Arun Kumar",
+        "location": "Chennai",
+        "date": "March 2025",
+        "avatar": "/images/avatar18.jpg"
+      }
+    ],
+    "photos": [
+      "/images/erode-photo1.jpg",
+      "/images/erode-photo2.jpg",
+      "/images/erode-photo3.jpg",
+      "/images/erode-photo4.jpg"
+    ]
+  }
+]
+  
