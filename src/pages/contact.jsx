@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/contact.css";
+import "../styles/styles.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
 
@@ -68,14 +69,14 @@ const Contact = () => {
   
   return (
     <div className="contact-page">
-      <div className="contact-hero">
-        <div className="hero-overlay">
+      <div className="parallax" style={{ backgroundImage: "url('../assets/formbg.jpg')" }}>
+        <div className="fade-in">
           <Container className="hero-content">
             <h1>Contact Us</h1>
             <p className="lead">We'd love to hear from you! Get in touch with any questions or inquiries.</p>
           </Container>
         </div>
-     
+      </div>
 
       <Container className="py-5">
         <Row>
@@ -142,7 +143,6 @@ const Contact = () => {
           </Col>
         </Row>
       </Container>
-    </div>
     </div>
   );
 };

@@ -1,16 +1,23 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/about.css";
+import "../styles/styles.css";
 import environmentImage from "../assets/environment.jpg";
 import advantageImage from "../assets/advantage.jpg";
 import foodImage from "../assets/food.jpg";
 import serviceImage from "../assets/service.jpg";
-import spa from "../assets/spa.jpg"
+import spa from "../assets/spa.jpg";
 import policyImage from "../assets/policy.jpg";
 
 const AboutUsContent = () => {
   return (
     <div className="about-us-page">
+      <div className="parallax" style={{ backgroundImage: `url(${environmentImage})` }}>
+        <div className="fade-in">
+          <h1>About Us</h1>
+          <p>Learn more about our mission and values</p>
+        </div>
+      </div>
       <div className="tint">
         <div className="contentwrapper">
           <Container className="py-5">

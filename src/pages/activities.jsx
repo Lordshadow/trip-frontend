@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import "../styles/activities.css";
+import "../styles/styles.css";
 import snorkelingImage from "../assets/snorkeling.jpg";
 import divingImage from "../assets/divingImage.jpg";
 import sunsetCruiseImage from "../assets/sunsetcruiseImage.jpg";
@@ -44,8 +45,8 @@ const Activities = () => {
 
   return (
     <div className="activities-page">
-      <div className="activities-hero">
-        <div className="hero-overlay">
+      <div className="parallax" style={{ backgroundImage: `url(${kayakingImage})` }}>
+        <div className="fade-in">
           <Container className="hero-content">
             <h1>Resort Activities</h1>
             <p className="lead">Embark on unforgettable adventures and create lasting memories at Paradise Resort.</p>

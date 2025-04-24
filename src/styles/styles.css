@@ -265,3 +265,109 @@ html, body {
   flex-grow: 1; /* Pushes the footer to the bottom */
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Ensure the dropdown menu is always on top of everything */
+.profile-dropdown {
+  margin-left: 1rem;
+  position: relative; /* Align dropdown relative to this */
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.dropdown-menu-custom {
+  position: fixed; /* Use fixed positioning to ensure it stays on top */
+  top: 10%; /* Adjust as needed to position it at the top */
+  right: 10%; /* Adjust as needed to position it on the right */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9999; /* Ensure it is above all other elements */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu-custom a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  transition: background-color 0.2s;
+}
+
+.dropdown-menu-custom a:hover {
+  background-color: #f8f9fa;
+}
+
+/* Global styles for animations, hover effects, and parallax backgrounds */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

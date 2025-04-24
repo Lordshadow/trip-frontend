@@ -1,0 +1,207 @@
+/* styles/VehicleCatalog.css */
+.vehicle-catalog-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f2f5, #e1e5ea);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    animation: fadeInContainer 1s ease-out; /* Animation for the whole container */
+  }
+  
+  @keyframes fadeInContainer {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .catalog-header {
+    background: rgba(0, 0, 0, 0.05); /* Lighter background for the header */
+    color: #333;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideDownHeader 0.6s ease-out;
+  }
+  
+  @keyframes slideDownHeader {
+    from {
+      transform: translateY(-15px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .catalog-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 0;
+    font-size: 2.8rem; /* Slightly smaller title */
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    animation: fadeInUpTitle 0.6s ease-out;
+  }
+  
+  @keyframes fadeInUpTitle {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .vehicle-grid {
+    display: grid;
+    gap: 30px;
+    width: 95%;
+    max-width: 1200px;
+    z-index: 1;
+  }
+  
+  .vehicle-grid.two-by-three {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted minmax for larger cards */
+  }
+  
+  .vehicle-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s ease-in-out;
+    position: relative;
+    opacity: 0; /* Initially hidden for fade-in */
+    animation: fadeInCard 0.5s ease-in-out forwards; /* Apply fade-in animation */
+  }
+  
+  /* Staggered fade-in effect for cards */
+  .vehicle-card:nth-child(1) { animation-delay: 0.2s; }
+  .vehicle-card:nth-child(2) { animation-delay: 0.4s; }
+  .vehicle-card:nth-child(3) { animation-delay: 0.6s; }
+  .vehicle-card:nth-child(4) { animation-delay: 0.8s; }
+  .vehicle-card:nth-child(5) { animation-delay: 1.0s; }
+  .vehicle-card:nth-child(6) { animation-delay: 1.2s; }
+  
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .vehicle-card:hover {
+    transform: translateY(-12px); /* More pronounced lift */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .vehicle-image-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vehicle-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .vehicle-image-link:hover .vehicle-image {
+    transform: scale(1.08); /* More zoom on hover */
+  }
+  
+  .vehicle-info {
+    padding: 25px; /* Slightly more padding */
+    text-align: center;
+  }
+  
+  .vehicle-capacity {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700; /* Bolder capacity text */
+    font-size: 1.8rem; /* Slightly larger capacity text */
+  }
+  
+  .vehicle-capacity-text {
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* More space above the button */
+  }
+  
+  .view-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #00bcd4, #008394);
+    color: #fff;
+    text-decoration: none;
+    border-color: transparent;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 6px 12px rgba(0, 188, 212, 0.3);
+    animation: gradientShift 3s ease-in-out infinite alternate; /* Apply gradient animation */
+    background-size: 200% 200%; /* Needed for the animation */
+  }
+  
+  .view-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 188, 212, 0.5);
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(135deg, #00bcd4, #27aa90); /* Initial colors */
+    }
+    50% {
+      background-position: 100% 50%;
+      background-image: linear-gradient(135deg, #2cb768, #10a8ad); /* Intermediate colors */
+    }
+    100% {
+      background-position: 0% 50%;
+      background-image: linear-gradient(135deg, #00bcd4, #008394); /* Back to initial colors (or slightly different for continuous change) */
+    }
+  }
+  
+  .view-button:hover {
+    background: linear-gradient(135deg, #008394, #006064);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 188, 212, 0.5);
+  }
+  
+  /* Responsive adjustments for 2x3 layout */
+  @media (max-width: 1200px) {
+    .vehicle-grid.two-by-three {
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Larger minmax for wider cards on medium screens */
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .vehicle-grid.two-by-three {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Even wider on tablet landscape */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .vehicle-grid.two-by-three {
+      grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+  }
