@@ -16,6 +16,7 @@ import VehicleCatalog from "./pages/VehicleCatalog";
 import VehicleDetails from "./pages/VehicleDetails";
 import LocationDetails from "./pages/LocationDetails";
 import LocationGrid from "./pages/LocationGrid";
+import Orders from "./pages/Orders";
 function App()
 {
     return (
@@ -25,7 +26,7 @@ function App()
             <Route path="/" element={<HomePage />} />
             <Route path="/locations" element={<LocationGrid />} />
             <Route path="/location/:locationName" element={<LocationDetails />} />
-            <Route path="/book/:roomId" element={<Booking roomId={1} />} />
+            <Route path="/book" element={<Booking />} />
             <Route path="/about" element={<AboutUsContent />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/vehicles" element={<VehicleCatalog />} />
@@ -33,6 +34,7 @@ function App()
             <Route path="/login" element={<SignIn />} />
            <Route path="/signup" element={<Register />} />
            <Route path="/profilepage" element={<ProfilePage/>}/>
+           <Route path="/profile/my-orders" element={<Orders />} />
            <Route path="/forgot-password" element={<ForgotPassword />} />
           </Routes>
           <Footer />
