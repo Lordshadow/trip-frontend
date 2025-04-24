@@ -1,0 +1,172 @@
+/* VehicleDetails.css */
+.vehicle-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .vehicle-info,
+  .booking-summary {
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+    height: 600px; /* fixed height for uniformity */
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .vehicle-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+  }
+  
+  .date-summary {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .check-button,
+  .book-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .not-available {
+    color: red;
+    font-weight: bold;
+  }
+  
+.vehicle-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .vehicle-info, .booking-summary {
+    flex: 1;
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .vehicle-info:hover, .booking-summary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    animation: slideInLeft 0.8s ease;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .check-button, .book-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .check-button:hover, .book-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .availability-result p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .not-available {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .vehicle-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .vehicle-image:hover {
+    transform: scale(1.05);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

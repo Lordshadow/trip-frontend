@@ -1,94 +1,247 @@
+/* contact.css */
+
+/* Overall contact page styles */
+.contact-page {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  background-image: url("https://assets.hiltonstatic.com/hilton-asset-cache/image/upload/c_fill,w_1920,h_1080,q_70,f_auto,g_auto/Imagery/Property%20Photography/Hilton%20Hotels%20and%20Resorts/D/DPSBAHI/Resort%20Overview-rev1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease; /* Transition for background color changes */
+}
+
+.contact-page:hover {
+  background-color: #222; /* Example: slightly darker on hover */
+}
+
+/* Parallax banner section */
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  background-image: url('your-contact-banner.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  transition: height 0.3s ease-in-out; /* Example transition on height */
+}
+
+.parallax:hover {
+  height: 320px; /* Example: slightly taller on hover */
+}
+
+/* Hero content on the parallax banner */
+.hero-content-contact {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero-content-contact h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease; /* Color transition */
+}
+
+.hero-content-contact h1:hover {
+  color: #007bff; /* Example: change color on hover */
+}
+
+.hero-content-contact .lead {
+  font-size: 1.2rem;
+}
+
+/* Main contact section below the banner */
+.contact-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Column styles for contact info and form */
+.contact-info-col,
+.contact-form-col {
+  background-color: rgba(0, 0, 0, 0.149);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  transition: transform 0.3s ease-in-out; /* Example: scale on hover */
+}
+
+.contact-info-col:hover,
+.contact-form-col:hover {
+  transform: scale(1.02); /* Example: slight scaling effect */
+}
+
+/* Card styles for info and form sections */
+.contact-info-card,
+.contact-form-card {
+  background-color: rgba(0, 0, 0, 0.764);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-card h2,
+.contact-form-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #fffdfd;
+}
+
+/* Contact details list */
+.contact-details {
+  list-style: none;
+  padding: 0;
+}
+
+.mb-4
+{
+  color: white;
+}
 
 
-.contact-page .form-control.is-invalid {
-    border-color: #dc3545;
-  }
-  
-  .contact-page .invalid-feedback {
-    display: block;
-    color: #dc3545;
-    font-size: 0.875em;
-    margin-top: 0.25rem;
-  }
+.contact-details li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #edebeb;
+}
 
+.contact-details .icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #007bff;
+}
 
-  .contact-page {
-    padding-top: 60px;
-    min-height: 100vh;
-    background-color: #00000052; 
-  
-    background-image: url("https://assets.hiltonstatic.com/hilton-asset-cache/image/upload/c_fill,w_1920,h_1080,q_70,f_auto,g_auto/Imagery/Property%20Photography/Hilton%20Hotels%20and%20Resorts/D/DPSBAHI/Resort%20Overview-rev1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    position: relative; 
-    overflow: hidden; 
-  }
-  
-  .contact-hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: -1; 
-  }
-  
-  
-  .contact-hero {
-    position: relative; 
-    z-index: 2;
-  }
-  
-  .contact-hero
-  {
-    color: white;
-  }
-  
-  .container {
-    position: relative; 
-    z-index: 1;
-  }
+.contact-details span {
+  font-size: 1rem;
+}
 
+/* Contact form styles */
+.contact-form-card p {
+  color: #faf5f5;
+  margin-bottom: 2rem;
+}
 
+.form-label {
+  font-weight: bold;
+  color: #dfdada;
+}
 
-.contact-page .form-control {
-    background-color: transparent; 
-    border: 1px solid white; 
-    border-radius: 0.25rem;
-    padding: 0.5rem 0.75rem;
-    width: 100%;
-    color: white; 
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transition for focus state */
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  background-color: white;
+  color: #333;
+}
+
+.form-control::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover and active */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Example: slight scaling effect */
+}
+
+.btn-primary:active {
+  transform: scale(0.95); /* Example: slight scaling effect when clicked */
+}
+
+.btn-primary:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Alert message styles */
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .contact-page .form-control:focus {
-    outline: none;
-    border-color: #03a8ef; 
-    box-shadow: 0 0 0 0.2rem rgba(3, 168, 239, 0.25); 
+  to {
+    opacity: 1;
   }
-  
-  .contact-page .form-control::placeholder {
-    color: white; 
-    opacity: 0.7; 
-  }
+}
 
-
-  .contact-info {
-    list-style: none;
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contact-info-col,
+  .contact-form-col {
+    margin-bottom: 30px;
+    padding-right: 0;
     padding-left: 0;
   }
-  
-  .contact-info li {
-    margin-bottom: 15px; 
-    display: flex;
-    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    height: 200px;
   }
-  
-  .contact-info li i {
-    font-size: 1.2rem;
-    margin-right: 10px;
-    color: #03a8ef;
+  .hero-content-contact h1 {
+    font-size: 2.5rem;
   }
+  .hero-content-contact .lead {
+    font-size: 1rem;
+  }
+}
