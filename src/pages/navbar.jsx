@@ -40,7 +40,6 @@ const NavBar = () => {
             <Nav.Link href="/vehicles">Vehicles Catalog</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
-            <Nav.Link href="/activities">Activities</Nav.Link>
 
             {/* Avatar Dropdown */}
             <div

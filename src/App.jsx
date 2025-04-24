@@ -30,8 +30,8 @@ function App()
             <Route path="/contact" element={<Contact />} />
             <Route path="/vehicles" element={<VehicleCatalog />} />
             <Route path="/vehicles/:id" element={<VehicleDetails />} />
-            <Route path="/signup" element={<SignIn />} />
-           <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<SignIn />} />
+           <Route path="/signup" element={<Register />} />
            <Route path="/profilepage" element={<ProfilePage/>}/>
            <Route path="/forgot-password" element={<ForgotPassword />} />
           </Routes>
