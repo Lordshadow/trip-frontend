@@ -128,7 +128,7 @@ const LocationDetails = () => {
         }
 
         try {
-            const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/temp-book', {
+            const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/temp-bookings/book', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
