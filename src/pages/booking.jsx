@@ -90,25 +90,32 @@ const HotelBooking = () => {
       return;
     }
 
+    const payload = {
+      firebaseUID, // Dynamically fetched user ID
+      hotel: hotelName,
+      location,
+      checkIn: checkInDate,
+      checkOut: checkOutDate,
+      roomCount,
+    };
+
+    console.log('Payload being sent to backend for booking:', payload);
+
     try {
       const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/temp-bookings/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          firebaseUID: firebaseUID,
-          hotelName,
-          checkInDate,
-          checkOutDate,
-          roomCount,
-        }),
+        body: JSON.stringify(payload),
       });
 
       const data = await response.json();
+      console.log('Response from backend for booking:', data);
+
       if (data.success) {
         alert('Booking successful!');
         navigate('/profile');
       } else {
-        alert('Booking failed. Please try again.');
+        alert(data.message || 'Booking failed. Please try again.');
       }
     } catch (error) {
       console.error('Error booking hotel:', error);

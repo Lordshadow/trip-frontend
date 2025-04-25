@@ -1,0 +1,44 @@
+/* MyBooking Page Styles */
+
+.my-booking-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.my-booking-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.booking-card {
+  padding: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booking-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.booking-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}

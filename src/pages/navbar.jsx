@@ -58,7 +58,6 @@ const NavBar = () => {
                   <a href="/signup">Sign Up</a>
                   <a href="/login">Log In</a>
                   <a href="/profilepage">My Profile</a>
-                  <a href="/book">Bookings</a>
                   <a href="/profile/my-orders">My Orders</a>
                 </div>
               )}
