@@ -27,6 +27,7 @@ function App()
             <Route path="/locations" element={<LocationGrid />} />
             <Route path="/location/:locationName" element={<LocationDetails />} />
             <Route path="/book" element={<Booking />} />
+            <Route path="/booking/:hotelName" element={<Booking />} />
             <Route path="/about" element={<AboutUsContent />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/vehicles" element={<VehicleCatalog />} />

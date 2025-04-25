@@ -148,6 +148,10 @@ const LocationDetails = () => {
         }
     };
 
+    const handleBookNow = (hotelName) => {
+        navigate(`/booking/${hotelName}`);
+    };
+
     if (!currentLocationData) {
         return <div>Loading location details for {locationName}...</div>;
     }
@@ -240,10 +244,7 @@ const LocationDetails = () => {
                                                         <p className="description">{hotel.description}</p>
                                                         <div className="rating">Rating: {hotel.rating} <span className="star">★</span></div>
                                                         <p className="price">Starting from {hotel.price}</p>
-                                                        <Link to="/book" style={{ textDecoration: 'none' }}>
-  <Button variant="contained" color="primary">Book Now</Button>
-</Link>
-
+                                                        <button onClick={() => handleBookNow(hotel.name)} className="book-now-btn">Book Now</button>
                                                     </div>
                                                 </div>
                                             ))}
