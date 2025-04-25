@@ -60,7 +60,7 @@ const ProfilePage = () => {
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     if (tab === 'orders') navigate('/profile/my-orders');
-    else if (tab === 'book') navigate('/profile/book');
+    else if (tab === 'book') navigate('/book');
     else navigate('/profile');
   };
 
