@@ -46,7 +46,7 @@ const VehicleDetails = () => {
         returnDate,
       });
 
-      const response = await fetch("http://localhost:5000/api/vehicles/check-availability", {
+      const response = await fetch("https://trip-planner-backend-isxb.onrender.com/api/vehicles/check-availability", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -123,7 +123,7 @@ const VehicleDetails = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:5000/api/temp-bookings/create", {
+      const response = await fetch("https://trip-planner-backend-isxb.onrender.com/api/temp-bookings/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

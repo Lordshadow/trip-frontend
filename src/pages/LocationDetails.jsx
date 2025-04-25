@@ -16,6 +16,9 @@ const LocationDetails = () => {
     const [currentLocationData, setCurrentLocationData] = useState(null);
     const [checkInDate, setCheckInDate] = useState(null);
     const [checkOutDate, setCheckOutDate] = useState(null);
+    const [availableHotels, setAvailableHotels] = useState([]);
+    const [selectedRooms, setSelectedRooms] = useState({});
+    const [priceMap, setPriceMap] = useState({});
     const reviewsContainerRef = useRef(null);
     const tabIndicatorRef = useRef(null);
 
@@ -45,7 +48,6 @@ const LocationDetails = () => {
     }, [currentLocationData?.reviews]);
 
     useEffect(() => {
-        // Set active tab based on the current URL path
         if (location.pathname.includes('/hotels')) {
             setActiveTab('hotels');
         } else if (location.pathname.includes('/vehicles')) {
@@ -71,19 +73,79 @@ const LocationDetails = () => {
         setActiveTab(tab);
         if (tab === 'vehicles') {
             navigate('/vehicles');
-        } else if (tab === 'hotels') {
-            // You might want a specific hotels route if needed
-            // navigate(`/locations/${locationName}/hotels`);
-        } else if (tab === 'photos') {
-            // navigate(`/locations/${locationName}/photos`);
-        } else {
-            // navigate(`/locations/${locationName}`); // Or just stay on the main location page
         }
     };
 
     const handleViewHotelDetailsClick = () => {
         setActiveTab('hotels');
-        // Optionally navigate to a hotels specific section
+    };
+
+    const handleCheckAvailability = async () => {
+        if (!checkInDate || !checkOutDate) {
+            alert("Please select both check-in and check-out dates.");
+            return;
+        }
+
+        try {
+            const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/hotel/check-availability', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    location: locationName,
+                    checkIn: checkInDate,
+                    checkOut: checkOutDate
+                })
+            });
+
+            const data = await response.json();
+            if (data.isAvailable) {
+                setAvailableHotels(data.availableHotels);
+            } else {
+                setAvailableHotels([]);
+                alert("No rooms available for selected dates.");
+            }
+        } catch (error) {
+            console.error("Error checking availability:", error);
+        }
+    };
+
+    const handleRoomSelection = (hotelName, count, rate) => {
+        setSelectedRooms(prev => ({ ...prev, [hotelName]: count }));
+        setPriceMap(prev => ({
+            ...prev,
+            [hotelName]: rate * count * dayjs(checkOutDate).diff(checkInDate, 'day')
+        }));
+    };
+
+    const getTotalPrice = (hotelName) => {
+        return priceMap[hotelName] || 0;
+    };
+
+    const handleTempBook = async (hotelName) => {
+        if (!selectedRooms[hotelName]) {
+            alert("Please choose a room first.");
+            return;
+        }
+
+        try {
+            const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/temp-book', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    firebaseUID: "test-user", // Replace with actual auth user
+                    hotel: hotelName,
+                    location: locationName,
+                    checkIn: checkInDate,
+                    checkOut: checkOutDate
+                })
+            });
+
+            const data = await response.json();
+            alert(data.message || "Temporary booking created!");
+        } catch (err) {
+            console.error(err);
+            alert("Booking failed.");
+        }
     };
 
     if (!currentLocationData) {
@@ -106,24 +168,7 @@ const LocationDetails = () => {
                     </div>
                 </div>
 
-                <div className="date-selection-bar">
-                    <h3 className="location-name-small">{name}</h3>
-                    <DatePicker
-                        label="Check-in"
-                        value={checkInDate}
-                        onChange={(date) => setCheckInDate(date)}
-                        renderInput={(params) => <TextField {...params} size="small" />}
-                    />
-                    <DatePicker
-                        label="Check-out"
-                        value={checkOutDate}
-                        onChange={(date) => setCheckOutDate(date)}
-                        renderInput={(params) => <TextField {...params} size="small" />}
-                    />
-                    <Button variant="contained" color="primary" className="check-availability-button">
-                        Check Availability
-                    </Button>
-                </div>
+            
 
                 <div className="main-content-tabs">
                     <button className={`tab ${activeTab === 'overview' ? 'active' : ''}`} onClick={() => handleTabClick('overview')}>Overview</button>
@@ -133,122 +178,129 @@ const LocationDetails = () => {
                     <div ref={tabIndicatorRef} className="tab-indicator"></div>
                 </div>
 
-                {activeTab === 'overview' && (
-                    <div className="overview-tab-content">
-                        <div className="main-content">
-                            <h2>About {name}</h2>
-                            <p>{description}</p>
 
-                            <h3>Top Tourist Spots</h3>
-                            <div className="tourist-spots-grid">
-                                {touristSpots && touristSpots.map((spot, index) => (
-                                    <div key={index} className="tourist-spot-card">
-                                        <div className="spot-image-placeholder">
-                                            <img src={spot.image} alt={spot.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                        </div>
-                                        <div className="spot-name">{spot.name}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="sidebar">
-                            <div className="location-info-card">
-                                <h3>{name} Information</h3>
-                                <p><span className="icon">📍</span> {name}, {country}</p>
-                                <p><span className="icon">★</span> Rating: {rating}</p>
-                                <p>Best time to visit: {bestTimeToVisit}</p>
-                            </div>
-
-                            <div className="featured-hotel-card">
-                                <h3>Featured Hotels</h3>
-                                {hotels && hotels.slice(0, 3).map((hotel, index) => (
-                                    <div key={index} className="hotel-item">
-                                        <img src={hotel.image} alt={hotel.name} className="hotel-image" />
-                                        <div className="hotel-details">
-                                            <h4>{hotel.name}</h4>
-                                            <p className="description-small">{hotel.description}</p>
-                                            <div className="rating">Rating: {hotel.rating} <span className="star">★</span></div>
-                                            <p className="price">Starting from {hotel.price}</p>
-                                            <Button variant="outlined" color="primary" size="small" onClick={handleViewHotelDetailsClick}>
-                                                View Details
-                                            </Button>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {activeTab === 'hotels' && (
-                    <div className="hotels-tab-content">
-                        <h2>Hotels in {name}</h2>
-                        <div className="hotel-grid">
-                            {hotels && hotels.map((hotel, index) => (
-                                <div key={index} className="hotel-card">
-                                    <img src={hotel.image} alt={hotel.name} className="hotel-image-large" />
-                                    <div className="hotel-info">
-                                        <h3>{hotel.name}</h3>
-                                        <p className="description">{hotel.description}</p>
-                                        <div className="rating">Rating: {hotel.rating} <span className="star">★</span></div>
-                                        <p className="price">Starting from {hotel.price}</p>
-                                        <Button variant="contained" color="primary">Book Now</Button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                )}
-
-                {activeTab === 'photos' && (
-                    <div className="photos-tab-content">
-                        <h2>Photos & Reviews of {name}</h2>
-                        <div className="photos-reviews-grid">
-                            {photos && photos.map((item, index) => (
-                                <img key={index} src={item} alt={`Photo ${index + 1}`} className="photo-review-item" />
-                            ))}
-                        </div>
-
-                        {reviews && reviews.length > 0 && (
-                            <section className="traveler-reviews-section">
-                                <h2>What Our Travelers Say</h2>
-                                <p className="reviews-intro">Read reviews from travelers who have experienced our services firsthand.</p>
-                                <div className="reviews-scrolling-container" ref={reviewsContainerRef}>
-                                    <div className="reviews-grid scrolling">
-                                        {[...reviews, ...reviews].map((review, index) => (
-                                            <div key={index} className="review-card scrolling-item">
-                                                <div className="rating">
-                                                    {[...Array(review.rating)].map((_, i) => (
-                                                        <span key={i} className="star">★</span>
-                                                    ))}
-                                                    {[...Array(5 - review.rating)].map((_, i) => (
-                                                        <span key={`empty-${i}`} className="empty-star">☆</span>
-                                                    ))}
+             {activeTab === 'overview' && (
+                                <div className="overview-tab-content">
+                                    <div className="main-content">
+                                        <h2>About {name}</h2>
+                                        <p>{description}</p>
+            
+                                        <h3>Top Tourist Spots</h3>
+                                        <div className="tourist-spots-grid">
+                                            {touristSpots && touristSpots.map((spot, index) => (
+                                                <div key={index} className="tourist-spot-card">
+                                                    <div className="spot-image-placeholder">
+                                                        <img src={spot.image} alt={spot.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                    </div>
+                                                    <div className="spot-name">{spot.name}</div>
                                                 </div>
-                                                <p className="review-text">"{review.text}"</p>
-                                                <div className="author-info">
-                                                    <img src={review.avatar} alt={review.author} className="author-avatar" />
-                                                    <div className="author-details">
-                                                        <h4 className="author-name">{review.author}</h4>
-                                                        <p className="author-location">{review.location} - {review.date}</p>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="sidebar">
+                                        <div className="location-info-card">
+                                            <h3>{name} Information</h3>
+                                            <p><span className="icon">📍</span> {name}, {country}</p>
+                                            <p><span className="icon">★</span> Rating: {rating}</p>
+                                            <p>Best time to visit: {bestTimeToVisit}</p>
+                                        </div>
+            
+                                        <div className="featured-hotel-card">
+                                            <h3>Featured Hotels</h3>
+                                            {hotels && hotels.slice(0, 3).map((hotel, index) => (
+                                                <div key={index} className="hotel-item">
+                                                    <img src={hotel.image} alt={hotel.name} className="hotel-image" />
+                                                    <div className="hotel-details">
+                                                        <h4>{hotel.name}</h4>
+                                                        <p className="description-small">{hotel.description}</p>
+                                                        <div className="rating">Rating: {hotel.rating} <span className="star">★</span></div>
+                                                        <p className="price">Starting from {hotel.price}</p>
+                                                        <Button variant="outlined" color="primary" size="small" onClick={handleViewHotelDetailsClick}>
+                                                            View Details
+                                                        </Button>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        ))}
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="read-all-reviews">
-                                    <Button variant="outlined" color="primary" endIcon={<span className="arrow-right">→</span>}>
-                                        Read All Reviews
-                                    </Button>
+                            )}
+            
+
+
+                {activeTab === 'hotels' && (
+                                    <div className="hotels-tab-content">
+                                        <h2>Hotels in {name}</h2>
+                                        <div className="hotel-grid">
+                                            {hotels && hotels.map((hotel, index) => (
+                                                <div key={index} className="hotel-card">
+                                                    <img src={hotel.image} alt={hotel.name} className="hotel-image-large" />
+                                                    <div className="hotel-info">
+                                                        <h3>{hotel.name}</h3>
+                                                        <p className="description">{hotel.description}</p>
+                                                        <div className="rating">Rating: {hotel.rating} <span className="star">★</span></div>
+                                                        <p className="price">Starting from {hotel.price}</p>
+                                                        <Link to="/book" style={{ textDecoration: 'none' }}>
+  <Button variant="contained" color="primary">Book Now</Button>
+</Link>
+
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
+
+                            {activeTab === 'photos' && (
+                                <div className="photos-tab-content">
+                                    <h2>Photos & Reviews of {name}</h2>
+                                    <div className="photos-reviews-grid">
+                                        {photos && photos.map((item, index) => (
+                                            <img key={index} src={item} alt={`Photo ${index + 1}`} className="photo-review-item" />
+                                        ))}
+                                    </div>
+            
+                                    {reviews && reviews.length > 0 && (
+                                        <section className="traveler-reviews-section">
+                                            <h2>What Our Travelers Say</h2>
+                                            <p className="reviews-intro">Read reviews from travelers who have experienced our services firsthand.</p>
+                                            <div className="reviews-scrolling-container" ref={reviewsContainerRef}>
+                                                <div className="reviews-grid scrolling">
+                                                    {[...reviews, ...reviews].map((review, index) => (
+                                                        <div key={index} className="review-card scrolling-item">
+                                                            <div className="rating">
+                                                                {[...Array(review.rating)].map((_, i) => (
+                                                                    <span key={i} className="star">★</span>
+                                                                ))}
+                                                                {[...Array(5 - review.rating)].map((_, i) => (
+                                                                    <span key={`empty-${i}`} className="empty-star">☆</span>
+                                                                ))}
+                                                            </div>
+                                                            <p className="review-text">"{review.text}"</p>
+                                                            <div className="author-info">
+                                                                <img src={review.avatar} alt={review.author} className="author-avatar" />
+                                                                <div className="author-details">
+                                                                    <h4 className="author-name">{review.author}</h4>
+                                                                    <p className="author-location">{review.location} - {review.date}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <div className="read-all-reviews">
+                                                <Button variant="outlined" color="primary" endIcon={<span className="arrow-right">→</span>}>
+                                                    Read All Reviews
+                                                </Button>
+                                            </div>
+                                        </section>
+                                    )}
+                                    {reviews && reviews.length === 0 && (
+                                        <p>No reviews available for {name} yet.</p>
+                                    )}
                                 </div>
-                            </section>
-                        )}
-                        {reviews && reviews.length === 0 && (
-                            <p>No reviews available for {name} yet.</p>
-                        )}
-                    </div>
-                )}
+                            )}
             </div>
         </LocalizationProvider>
     );
