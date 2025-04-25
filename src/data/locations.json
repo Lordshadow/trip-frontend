@@ -65,10 +65,10 @@
       }
     ],
     "photos": [
-      "/images/salem-photo1.jpg",
-      "/images/salem-photo2.jpg",
-      "/images/salem-photo3.jpg",
-      "/images/salem-photo4.jpg"
+      "/src/assets/murugan1.jpg",
+      "/src/assets/yer1.jpg",
+      "/src/assets/mdam.jpg",
+      "/src/assets/kas.jpg"
     ]
   },
   {
@@ -136,7 +136,7 @@
       }
     ],
     "photos": [
-      "/images/namakkal-photo1.jpg",
+      "/src/assets/nrf.jpg",
       "/images/namakkal-photo2.jpg",
       "/images/namakkal-photo3.jpg",
       "/images/namakkal-photo4.jpg"
@@ -278,10 +278,10 @@
       }
     ],
     "photos": [
-      "/images/karur-photo1.jpg",
-      "/images/karur-photo2.jpg",
-      "/images/karur-photo3.jpg",
-      "/images/karur-photo4.jpg"
+      "/src/assets/view.jpg",
+      "/src/assets/lake.jpg",
+      "/src/assets/pine.jpg",
+      "/src/assets/view1.jpg"
     ]
   },
   {
