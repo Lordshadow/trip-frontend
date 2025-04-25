@@ -12,7 +12,7 @@ const HomePage = () => {
               Discover amazing destinations and create your ideal trip with
               TripTack Tix.
             </p>
-            <a href="/destinations" className="btn-explore">
+            <a href="/locations" className="btn-explore">
               Explore Destinations
             </a>
           </div>
@@ -37,14 +37,14 @@ const HomePage = () => {
                   className="card-img-top"
                 />
                 <div className="card-body text-center">
-                  <h3 className="card-title h5">Tokyo, Japan</h3>
+                  <h3 className="card-title h5">Bangalore</h3>
                   <p className="card-text small">
                     Experience the vibrant culture, futuristic architecture,
                     and delicious cuisine of this incredible metropolis with
                     TripTack Tix.
                   </p>
                   <a
-                    href="/destinations?location=tokyo"
+                    href="/locations"
                     className="btn-outline-primary"
                   >
                     Explore
@@ -58,13 +58,13 @@ const HomePage = () => {
                   className="card-img-top"
                 />
                 <div className="card-body text-center">
-                  <h3 className="card-title h5">Rome, Italy</h3>
+                  <h3 className="card-title h5">Tanjore</h3>
                   <p className="card-text small">
                     Discover ancient history, iconic landmarks, and charming
                     streets in the eternal city with TripTack Tix.
                   </p>
                   <a
-                    href="/destinations?location=rome"
+                    href="/locations"
                     className="btn-outline-primary"
                   >
                     Explore
@@ -78,14 +78,12 @@ const HomePage = () => {
                   className="card-img-top"
                 />
                 <div className="card-body text-center">
-                  <h3 className="card-title h5">Swiss Alps, Switzerland</h3>
+                  <h3 className="card-title h5">Others</h3>
                   <p className="card-text small">
-                    Immerse yourself in breathtaking mountain scenery, enjoy
-                    outdoor activities, and experience Swiss hospitality with
-                    TripTack Tix.
+                    You Can plan for many other trips to many other places in India which are not shown in our page by Contacting us Directly
                   </p>
                   <a
-                    href="/destinations?location=swiss-alps"
+                    href="/locations"
                     className="btn-outline-primary"
                   >
                     Explore
@@ -94,7 +92,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="text-center mt-4">
-              <a href="/destinations" className="btn-primary">
+              <a href="/locations" className="btn-primary">
                 View All Destinations on TripTack Tix
               </a>
             </div>
@@ -151,7 +149,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="text-center mt-4">
-              <a href="/plan" className="btn-secondary">
+              <a href="/locations" className="btn-secondary">
                 Start Planning Now with TripTack Tix
               </a>
             </div>
