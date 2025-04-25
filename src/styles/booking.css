@@ -125,3 +125,150 @@
 .form-group:nth-child(2) { animation-delay: 0.2s; }
 .form-group:nth-child(3) { animation-delay: 0.3s; }
 .form-group:nth-child(4) { animation-delay: 0.4s; }
+
+.hotel-booking-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hotel-booking-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  animation: slideDown 1s ease-in-out;
+}
+
+.hotel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.hotel-info {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.hotel-info p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.booking-form label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.booking-form input {
+  padding: 12px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.booking-form input:hover {
+  border-color: #0056b3;
+}
+
+.booking-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #555;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hotel-booking-container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .hotel-booking-container h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+}

@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import locationData from '../data/locations.json';
 import '../styles/booking.css';
+import { getAuth } from "firebase/auth";
 
 const HotelBooking = () => {
   const { hotelName } = useParams();
   const navigate = useNavigate();
   const [hotelDetails, setHotelDetails] = useState(null);
-  const [checkInDate, setCheckInDate] = useState('');
+  const [checkInDate, setCheckInDate] = useState(new Date().toISOString().split('T')[0]);
   const [checkOutDate, setCheckOutDate] = useState('');
   const [roomCount, setRoomCount] = useState(1);
 
@@ -35,17 +36,66 @@ const HotelBooking = () => {
     fetchHotelDetails();
   }, [hotelName]);
 
+  const location = hotelDetails?.location || 'Default Location';
+
+  const handleCheckAvailability = async () => {
+    if (!location || !checkInDate || !checkOutDate || roomCount < 1) {
+      alert('Please fill in all fields to check availability.');
+      return;
+    }
+
+    const payload = {
+      location, // Add location to the payload
+      hotelName,
+      checkIn: checkInDate, // Match the backend field names
+      checkOut: checkOutDate,
+      roomCount,
+    };
+
+    console.log('Payload being sent to backend:', payload);
+
+    try {
+      const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/hotels/check-availability', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+      console.log('Response from backend:', data);
+
+      if (data && data.success && data.isAvailable) {
+        alert('Rooms are available!');
+      } else {
+        alert(data.message || 'No rooms available for the selected dates.');
+      }
+    } catch (error) {
+      console.error('Error checking availability:', error);
+      alert('An error occurred while checking availability.');
+    }
+  };
+
   const handleBookNow = async () => {
     if (!checkInDate || !checkOutDate || roomCount < 1) {
       alert('Please fill in all fields.');
       return;
     }
 
+    const auth = getAuth();
+    const user = auth.currentUser;
+    const firebaseUID = user ? user.uid : null;
+
+    if (!firebaseUID) {
+      alert("You must be logged in to book a hotel.");
+      return;
+    }
+
     try {
-      const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/tempHotelBooking/book', {
+      const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/temp-bookings/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          firebaseUID: firebaseUID,
           hotelName,
           checkInDate,
           checkOutDate,
@@ -67,7 +117,7 @@ const HotelBooking = () => {
   };
 
   if (!hotelDetails) {
-    return <div>Loading hotel details...</div>;
+    return <div className="loading">Loading hotel details...</div>;
   }
 
   return (
@@ -105,6 +155,7 @@ const HotelBooking = () => {
           min="1"
         />
 
+        <button onClick={handleCheckAvailability}>Check Availability</button>
         <button onClick={handleBookNow}>Book Now</button>
       </div>
     </div>
