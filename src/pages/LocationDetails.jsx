@@ -7,6 +7,7 @@ import { TextField, Button } from '@mui/material';
 import dayjs from 'dayjs';
 import '../styles/LocationDetails.css';
 import locationData from '../data/locations.json';
+import { getAuth } from "firebase/auth";
 
 const LocationDetails = () => {
     const { locationName } = useParams();
@@ -127,12 +128,21 @@ const LocationDetails = () => {
             return;
         }
 
+        const auth = getAuth();
+        const user = auth.currentUser;
+        const firebaseUID = user ? user.uid : null;
+
+        if (!firebaseUID) {
+            alert("You must be logged in to book a hotel.");
+            return;
+        }
+
         try {
             const response = await fetch('https://trip-planner-backend-isxb.onrender.com/api/temp-book', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    firebaseUID: "test-user", // Replace with actual auth user
+                    firebaseUID: firebaseUID,
                     hotel: hotelName,
                     location: locationName,
                     checkIn: checkInDate,
@@ -146,6 +156,10 @@ const LocationDetails = () => {
             console.error(err);
             alert("Booking failed.");
         }
+    };
+
+    const handleBookNow = (hotelName) => {
+        navigate(`/booking/${hotelName}`);
     };
 
     if (!currentLocationData) {
@@ -240,10 +254,7 @@ const LocationDetails = () => {
                                                         <p className="description">{hotel.description}</p>
                                                         <div className="rating">Rating: {hotel.rating} <span className="star">★</span></div>
                                                         <p className="price">Starting from {hotel.price}</p>
-                                                        <Link to="/book" style={{ textDecoration: 'none' }}>
-  <Button variant="contained" color="primary">Book Now</Button>
-</Link>
-
+                                                        <button onClick={() => handleBookNow(hotel.name)} className="book-now-btn">Book Now</button>
                                                     </div>
                                                 </div>
                                             ))}

@@ -3,7 +3,7 @@ import '../styles/ProfilePage.css';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Orders from './Orders';
-import Booking from './booking'; // Assuming a component for bookings is created
+import MyBooking from './MyBooking'; // Assuming a component for bookings is created
 
 const ProfilePage = () => {
   const [userProfile, setUserProfile] = useState(null);
@@ -17,7 +17,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (location.pathname.endsWith('/my-orders')) {
       setActiveTab('orders');
-    } else if (location.pathname.endsWith('/book')) {
+    } else if (location.pathname.endsWith('/my-bookings')) {
       setActiveTab('book');
     } else {
       setActiveTab('profile');
@@ -60,7 +60,7 @@ const ProfilePage = () => {
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     if (tab === 'orders') navigate('/profile/my-orders');
-    else if (tab === 'book') navigate('/book');
+    else if (tab === 'book') navigate('/my-bookings');
     else navigate('/profile');
   };
 
@@ -131,7 +131,7 @@ const ProfilePage = () => {
           </>
         )}
         {activeTab === 'orders' && <Orders />}
-        {activeTab === 'book' && <Booking />}
+        {activeTab === 'book' && <MyBooking />}
       </main>
     </div>
   );
