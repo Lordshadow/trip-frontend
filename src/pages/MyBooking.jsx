@@ -15,7 +15,7 @@ const MyBooking = () => {
       }
 
       try {
-            const response = await fetch(`https://trip-planner-backend-isxb.onrender.com/api/hotels/temp-bookings/${user.uid}`, {
+        const response = await fetch(`https://trip-planner-backend-isxb.onrender.com/api/hotels/temp-bookings/${user.uid}`, {
           method: 'GET',
           headers: { 'Content-Type': 'application/json' },
         });
@@ -42,6 +42,7 @@ const MyBooking = () => {
   return (
     <div className="my-booking-container">
       <h1>My Bookings</h1>
+      <p>Firebase UID: {user?.uid}</p>
       {bookings.length === 0 ? (
         <p>No bookings found.</p>
       ) : (

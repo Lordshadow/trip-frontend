@@ -39,7 +39,7 @@ function App()
            <Route path="/profilepage" element={<ProfilePage/>}/>
            <Route path="/profile/my-orders" element={<Orders />} />
            <Route path="/forgot-password" element={<ForgotPassword />} />
-           <Route path="/profile/my-bookings" element={<MyBooking />} />
+           <Route path="/my-bookings" element={<MyBooking />} />
           </Routes>
           <Footer />
         </Router>
