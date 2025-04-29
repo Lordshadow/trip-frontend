@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/LocationGrid.css';
-import salem from'../assets/salem.jpg';
-import kolli from'../assets/kolli.jpg';
-import trichy from'../assets/kallanai.jpg';
-import kodai from'../assets/kodai.jpg';
-import kovai from'../assets/coimbatore.jpg';
-import ram from'../assets/ram.jpg';
+import salem from '/assets/salem.jpg';
+import kolli from '/assets/kolli.jpg';
+import trichy from '/assets/kallanai.jpg';
+import kodai from '/assets/kodai.jpg';
+import kovai from '/assets/coimbatore.jpg';
+import ram from '/assets/ram.jpg';
 
 const locations = [
     { name: 'Salem', image: salem },

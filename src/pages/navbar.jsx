@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaUserCircle } from "react-icons/fa"; // Import user icon
 import "../styles/styles.css"; // Your custom CSS
-import logo from "../assets/logo.jpg";
+import logo from "/assets/logo.jpg";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

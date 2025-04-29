@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/VehicleCatalog.css";
-import five from '../assets/aura.jpg';
-import seven from'../assets/ertiga4.jpg';
-import twelve from'../assets/force.jpg';
-import twenty from'../assets/pooja.jpg';
-import thirty from'../assets/velavan.jpg';
-import ff from'../assets/bus2.jpg';
+import five from '/assets/aura.jpg';
+import seven from '/assets/ertiga4.jpg';
+import twelve from '/assets/force.jpg';
+import twenty from '/assets/pooja.jpg';
+import thirty from '/assets/velavan.jpg';
+import ff from '/assets/bus2.jpg';
 ;const vehicles = [
   { id: 1, name: "Sedan", image: five, capacity: "5 Passengers", description: "A comfortable sedan for city commutes and small families." },
   { id: 2, name: "SUV", image: seven, capacity: "7 Passengers", description: "A spacious SUV perfect for families and adventurous trips." },

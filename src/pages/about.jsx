@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../styles/about.css";
 import "../styles/styles.css";
-import environmentImage from "../assets/environment.jpg";
-import advantageImage from "../assets/advantage.jpg";
-import foodImage from "../assets/food.jpg";
-import serviceImage from "../assets/service.jpg";
-import spa from "../assets/spa.jpg";
-import policyImage from "../assets/policy.jpg";
+import environmentImage from "/assets/environment.jpg";
+import advantageImage from "/assets/advantage.jpg";
+import foodImage from "/assets/food.jpg";
+import serviceImage from "/assets/service.jpg";
+import spa from "/assets/spa.jpg";
+import policyImage from "/assets/policy.jpg";
 
 const AboutUsContent = () => {
   return (
